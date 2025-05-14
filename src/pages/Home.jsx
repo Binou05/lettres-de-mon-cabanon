@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import "./Home.css";
-import heroImg from "../assets/Lettres-de-mon-cabanon1.png"; 
+import heroImg from "../assets/images/Lettres-de-mon-cabanon1.png"; 
 
 function Home() {
   return (

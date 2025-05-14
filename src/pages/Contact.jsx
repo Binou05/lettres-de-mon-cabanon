@@ -10,7 +10,7 @@ export default function Contact() {
       <Navbar />
 
       <section
-        className="contactus fullbleed h-98vh"
+        className="contactus fullbleed h-94vh"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
         <div className="overlay">
