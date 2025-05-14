@@ -1,0 +1,247 @@
+/* Éclaircir le fond et overlay */
+.contactus {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    min-height: calc(108vh - var(--navbar-height) - var(--footer-height));
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(1.28);
+    overflow: hidden;
+    height: auto;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  /* Conteneur de contenu, reprend .contactez-nous + .headingcontent */
+  .contactusframe {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    color: #fff;              /* texte blanc */
+    font-family: var(--font-manrope, sans-serif);
+  }
+
+  .contact-card {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.6);
+    /* ou garder un fond très léger :
+       background: rgba(255,255,255,0.1); */
+    padding: 2rem;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+       
+    width: 100%;           /* occupe 90% de l’espace parent */
+    margin: 0 auto;       /* centre horizontalement */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  
+  /* Titres dans la carte prennent la couleur foncée */
+  .contact-card .titre-contact {
+    color: #0e498be5;
+  }
+  .contact-card .text-contact {
+    color: #0e498be5;                 /* gris sombre pour le paragraphe */
+  }
+  
+  /* Champs du formulaire plus compacts dans la carte */
+  .contact-card .contact-form input {
+    background: rgba(255,255,255,0.3);
+    color: #333;
+  }
+  
+  /* Bouton plus contrasté */
+  .contact-card .boutoncontact {
+    background: #0077be;         /* bleu Méditerranée */
+    color: #fff;
+  }
+  .contact-card .boutoncontact:hover {
+    background: #005f9e;
+  }
+  
+  /* Titre principal (remplace .titre-contact et .headingcontent) */
+  .titre-contact {
+    font-size: var(--font-size-xl, 2rem);    /* taille XL */
+    line-height: 1.686;                      /* 168.6% */
+    margin-bottom: 1rem;
+  }
+  
+  /* Texte sous-titre (reprend .sous-titre) */
+  .text-contact {
+    font-size: 24px;
+    line-height: 44px;
+    max-width: 727px;
+    margin-bottom: 1.5rem;
+    color: #14608f;                  /* blanc pur */
+  }
+  
+  /* Formulaire : layout en colonne, gap entre champs */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  /* Champs de saisie */
+  .contact-form input {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #222;
+  }
+  .contact-form input::placeholder {
+    color: #3a3131;              /* gris foncé pour le placeholder */
+    opacity: 1;               /* certains navigateurs baissent l’opacité par défaut */
+  }
+  /* === Champ textarea === */
+.contact-form textarea.contact-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #333;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  border-radius: 4px;
+  resize: vertical;        /* l’utilisateur peut redimensionner verticalement */
+  min-height: 120px;       /* hauteur de base */
+  box-sizing: border-box;  /* inclut le padding dans la largeur */
+}
+/* 1) Texte saisi sombre dans le textarea */
+.contact-textarea {
+  color: #222;                /* texte de l’utilisateur */
+  font-family: inherit;
+}
+
+/* 2) Placeholder plus lisible */
+.contact-textarea::placeholder {
+  color: #333;                /* placeholder en gris foncé */
+  opacity: 1;
+}
+
+/* 3) Label “Votre message” en bleu */
+label[for="message"] {
+  color: #0b2f84e5;             /* même bleu d’accent que tes boutons */
+  font-weight: 600;
+  display: block;             /* pour être sûr qu’il prenne toute la largeur */
+  margin-bottom: 0.5rem;      /* petit écart avec la zone */
+}
+
+  /* Bouton de contact (reprend .boutoncontact + .button-frame) */
+  .button-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 299px;
+    margin: 0 auto;
+  }
+  
+  .boutoncontact {
+    width: 100%;
+    height: 55px;
+    background-color: var(--color-mediumslateblue, #7e80f5);
+    color: #fff;
+    border: none;
+    border-radius: var(--br-mini, 4px);
+    box-shadow: 0 5px 14px rgba(126, 128, 245, 0.4);
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .boutoncontact:hover {
+    background-color: #6b6ee0;
+  }
+
+/* === Responsive Contact === */
+
+/* Tablettes (≤ 1024px) */
+@media (max-width: 1024px) {
+  .contactus {
+    height: 100%;              /* laisse la hauteur s’ajuster */
+    padding: 2rem 1rem;        /* plus de marge intérieure */
+  }
+  .contactusframe {
+    max-width: 90%;            /* presque toute la largeur */
+    padding: 2rem;
+  }
+  .contact-card {
+    width: 100%;               /* champs plein écran */
+  }
+  .contact-form input,
+  .contact-textarea {
+    width: 100%;               /* 100% du conteneur */
+  }
+}
+
+/* Mobiles (≤ 768px) */
+@media (max-width: 768px) {
+  .contactus {
+    padding: 3rem 1.5rem;
+  }
+  .contactusframe {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+  .titre-contact {
+    font-size: 1.75rem;        /* un chouïa plus petit */
+  }
+  .text-contact {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .contact-form {
+    gap: 1rem;
+  }
+}
+
+/* Très petits écrans (≤ 480px) */
+@media (max-width: 480px) {
+  .contactus {
+    padding: 1 rem ;
+  }
+  .titre-contact {
+    font-size: 1rem;
+  }
+  .boutoncontact {
+    font-size: 0.9rem;
+    height: 30px;
+  }
+}
+.contactusframe {
+  padding: 1rem;
+  max-width: 100%;
+  max-height: 60%;
+}

@@ -1,0 +1,138 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+/* ================== */
+/* 1) Nav bar full width */
+/* ================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 60px; 
+    background-color: #004f71;
+    z-index: 1000;
+  }
+  body {
+    margin: 0;
+    padding-top: 60px;     /* repousse tout le contenu sous la navbar */
+  }
+  
+ /* ================== */
+/* 2) Inner container full-width */
+/* ================== */
+.navbar__inner {
+    width: 100%;               /* prend 100% du viewport */
+    padding: 0.75rem 1.5rem;   /* ajustable selon l’espacement désiré */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  /* ================== */
+  /* 3) Brand: logo + title */
+  /* ================== */
+  .navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .navbar__logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .navbar__title {
+    color: #ffc107;       /* ou la couleur que tu veux */
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  /* ================== */
+  /* 4) Desktop links */
+  /* ================== */
+  .navbar__links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+  }
+  
+  .navbar__links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+  
+  .navbar__links li a:hover {
+    opacity: 0.7;
+  }
+  
+  /* ================== */
+  /* 5) Burger button (hidden on desktop) */
+  /* ================== */
+  .navbar__burger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .navbar__burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  /* transform burger → croix */
+  .navbar__burger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .navbar__burger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar__burger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  
+  /* ================== */
+  /* 6) Responsive: mobile under 768px */
+  /* ================== */
+  @media (max-width: 768px) {
+    /* affiche le burger */
+    .navbar__burger {
+      display: flex;
+    }
+  
+    /* cache les liens en ligne */
+    .navbar__links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #004f71;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease-out;
+    }
+  
+    /* lorsque le menu est ouvert */
+    .navbar__links.open {
+      max-height: 240px; /* ajuste pour 4 ou 5 items */
+    }
+  }
+  

@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* src/pages/About.css */
+
+/* Variables & reset partiel */
+:root {
+  --navbar-height: 60px;
+  --card-max-width: 800px;
+  --gap: 1rem;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+/* 1. Hero full-screen */
+.about__hero {
+  flex: 0 0 50vh;
+  background: center/cover no-repeat;
+}
+
+/* 2. Card centrée, recouvrant partiellement le Hero */
+.about__card {
+  /* NOUVEAU : blanc opaque */
+  background: transparent;
+  /* si tu veux un tout petit peu de transparence : */
+ 
+  
+  /* le reste inchangé */
+  position: relative;
+  top: calc(-25vh);
+  margin: 0 auto var(--gap);
+  width: 100%;
+  max-width: var(--card-max-width);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: var(--gap);
+}
+
+
+/* 3. Onglets */
+.about__tabs {
+  position: absolute;
+  margin-bottom: 3rem; 
+  left: 50%;
+  transform: translateX(-50%);
+ 
+  padding: 0.5rem 1rem;
+  border-radius: 8px 8px 0 0;       /* si tu veux un style d’onglets collés */
+  padding: 0.75rem 1.5rem 0.5rem; 
+}       /* un petit padding pour l’espace interne */
+.about__tabs + * {
+  margin-top: 3.5rem;  /* 2rem ou 3rem selon l’espacement désiré */
+}
+
+.about__tabs button {
+  background-color:  #ac2b2be6;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #2f6b94;
+ border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  margin-bottom: 2rem; 
+  margin-top: 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+  
+}
+.about__tabs button.active {
+  font-weight: bold;
+  border-color: #2f6b94;
+}
+
+
+/* Titre secondaire dans la bio */
+.about__bio-title {
+  font-size: 1.75rem;
+  color: #2f6b94;        /* même bleu que tes onglets */
+  text-align: center;    /* ou left si tu préfères */
+  margin-top: 2rem;
+  margin-bottom: 3rem; /* espace avant les photos */
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.about__bio-photos {
+  display: flex;
+  gap: 1rem; 
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 18px;
+ 
+}
+.about__bio-photos img {
+  width: auto;                  /* laisse la largeur s’ajuster */
+  height: 200px;                /* nouvelle hauteur désirée */
+  object-fit: cover;
+
+}
+.about__bio-text {
+  text-align: left; /* plus lisible qu'un centrage complet */
+  max-width: 800px; /* limite la largeur pour la lecture */
+  margin: 0 auto; 
+  
+}
+.about__bio-text p {
+  margin-bottom: 1.2rem;
+  margin-right: 1.2rem;
+}
+/* 5. Articles */
+.about__articles h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+  color: #2f6b94;
+}
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  justify-items: center; 
+}
+
+
+/* 4. La légende occupe un bloc fixe en bas */
+
+.articles-grid figure {
+  width: 260px;
+  background: #ffffff05;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.articles-grid img {
+  width: 100%;
+}
+.articles-grid figcaption {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ====== Galerie épurée ====== */
+.gallery-bg {
+  /* simple fond crème */
+  background-color: 
+  
+    #eedeb282;
+}
+.about__gallery {
+  padding: 2rem 1rem;
+  max-width: 1900px;
+  margin: 0 auto;
+  background: transparent;
+
+}
+
+/* Titre centré + espacé */
+.about__gallery > h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  color: var(--color-primary);
+}
+
+/* Chaque « bloc » (Vieux Miramas, etc.) est désormais une grille verticale */
+.about__gallery .gallery-block {
+  margin-bottom: 2rem;
+}
+
+/* Affiche principale, 100% largeur de son bloc */
+.about__gallery .block-main {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+/* Les vignettes (photos + vidéo) côte-à-côte */
+.about__gallery .block-subs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+/* Style des vignettes */
+.about__gallery .block-subs img,
+.about__gallery .block-subs video {
+  width: 100%;
+  height: 250px;           /* un poil plus grand */
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.about__gallery .block-video {
+  
+  margin-top: 0rem;
+}
+/* 7. Media queries */
+@media (min-width: 768px) {
+  .about__bio {
+    flex-direction: row;
+    text-align: left;
+  }
+  .about__bio-photos img {
+    width: 140px;
+  }
+  .about__bio-text {
+    max-width: 60%;
+  }
+  .about__card {
+    top: calc(-25vh);
+  }
+}
+
+@media (min-width: 1366px) {
+  .about__hero {
+    flex: 0 0 60vh;
+  }
+  .about__card {
+    top: calc(-30vh);
+  }
+  .about__bio-photos img {
+    width: 180px;
+  }
+}
+/* Onglets centrés */
+.about__tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+  
+  /* 1) largeur auto pour ne coller qu’au texte */
+  width: max-content;
+  
+  /* 2) margin auto pour centrer dans la carte */
+  margin: -1.5rem auto 1rem;
+  
+  /* plus de fond derrière */
+  background: transparent;
+  padding: 0;
+}
+
+/* Styles des boutons onglet */
+.about__tabs button {
+  background-color: rgba(245, 222, 179, 0.9);
+  border: none;
+  color: #092a64;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+ 
+}
+
+.about__tabs button.active {
+  border-bottom: 2px solid #054766;
+  font-weight: bold;
+}
+/* 1) Conteneur responsive : garder les images à la taille max de leur bloc */
+.articles-grid img,
+.about-gallery .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;          /* indicateur de survol */
+}
+
+/* 2) Zoom au hover */
+.articles-grid figure:hover img,
+.about-gallery .gallery-item:hover img {
+  transform: scale(1.1);    /* zoom à 110% */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* 3) Pour que l’image reste bien centrée pendant le zoom */
+.articles-grid figure,
+.about-gallery .gallery-item {
+  overflow: hidden;
+  border-radius: 8px;       /* même coins ronds que tes cartes */
+}
+
+/* 4) Responsive : ajuster le nombre de colonnes */
+@media (max-width: 768px) {
+  .articles-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .articles-grid figure {
+    width: 90%;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-gallery {
+    grid-template-columns: 1fr; /* une seule colonne */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1365px) {
+  .about-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1366px) {
+  .about-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+/* responsive */
+@media (max-width: 768px) {
+  .about__gallery {
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .about__gallery .gallery-block {
+    max-width: 280px;
+    gap: 0.75rem;
+  }
+  .about__gallery h2 {
+    font-size: 1.6rem;
+  }
+}
+/* src/pages/About.css */
+
+
+/* 1) thumbnail cursor */
+.article-thumb img {
+  cursor: zoom-in;
+}
+
+/* 2) overlay plein écran */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* 3) contenu du modal */
+.modal-content {
+  position: relative;
+  max-width: 100vw;
+  max-height: 120vh;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  
+}
+
+/* 4) zone image scrollable / zoomable */
+.modal-img-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  cursor: zoom-out;
+}
+
+/* 5) l’image prend tout l’espace possible */
+.modal-img-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* permet le pinch-to-zoom sur mobile */
+  touch-action: pan-x pan-y;
+}
+
+/* 6) bouton de fermeture */
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: #333;
+  cursor: pointer;
+  z-index: 1;
+}
+/* overlay plein écran */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+/* image zoomable */
+.modal-content img {
+  width: 100%;
+  height: 80vh;
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+}
+
+/* contrôles de zoom et fermeture */
+.modal-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.modal-controls button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.2rem;
+  background: #2f6b94;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Overlay plein écran2 */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Contenu du modal (boîte blanche) */
+.modal-content {
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+
+  /* on limite la taille au viewport */
+  width: 95vw;
+  max-width: 1200px;
+  height: 95vh;
+  max-height: 95vh;
+
+  /* on active le scroll interne si besoin */
+  overflow: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* L’image du modal */
+.modal-content img {
+  /* on laisse l’image monter jusqu’à la taille max du conteneur */
+  max-width: 100%;
+  max-height: calc(95vh - 4rem); /* on enlève l’espace pour les contrôles (+ marge) */
+  object-fit: contain;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+/* Les contrôles (zoom + / – / fermer) */
+.modal-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.modal-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.25rem;
+  color: #2f6b94;
+  transition: color 0.2s;
+}
+
+.modal-controls button:hover {
+  background: #1b4f6b;
+}
+/* 1) Autorise l’affichage hors du cadre */
+.modal-content {
+  position: relative; /* pour positionner absolument à l’intérieur */
+  overflow: visible;  /* on laisse dépasser l’image et les boutons */
+}
+
+/* 2) Positionne les contrôles en haut à droite */
+.modal-controls {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;     /* ou left:0.5rem pour à gauche */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 10;       /* devant l’image */
+}
+
+/* 3) Styles des boutons (petit cercle) */
+.modal-controls button {
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.modal-controls button:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.block-video {
+  width: 100%;
+  max-width: 600px;   /* ou la taille que tu préfères */
+  margin: 1rem auto 2rem;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Responsive : vidéo plus petite sur mobile */
+@media (max-width: 600px) {
+  .block-video {
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+}
+/* 1) Le conteneur .about__bio reste en flex-col */
+/* Trouve cette règle (ou ajoute-la) */
+.about__bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Remplace var(--gap) par un espacement plus petit, p.ex. 0.5rem */
+  gap: 0.5rem;            
+  padding: var(--gap);
+}
+
+
+/* 2) Ton titre bio aligné au centre de la carte */
+.about__bio-title {
+  width: 100%;            /* prend toute la largeur interne de la carte */
+  text-align: center;     /* centre le texte à l’intérieur */
+  font-size: 1.75rem;
+  color: #2f6b94;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* 3) Les photos n’ont plus besoin de margin-left négatif */
+.about__bio-photos {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+  justify-content: center;
+}

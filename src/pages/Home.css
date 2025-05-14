@@ -1,0 +1,50 @@
+.hero {
+    /* Exemple pour ton hero, adapte la classe .about__hero ou .home__hero */
+
+  position: relative;          
+  background: center/cover no-repeat url('../assets/Lettres-de-mon-cabanon1.png');
+
+
+  
+  width: 100vw;                 /* on prend toute la largeur visible */
+  height: 100vw;                 /* ou la hauteur que tu veux */
+
+}
+  
+  .hero-image {
+    width: 100%;                 /* on prend toute la largeur visible */
+    height: 80%; 
+    object-fit: cover;
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    padding: 0 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom:1rem;
+    color:black;
+  }
+  .couleur-accent {
+    color: #0077be; /* ou ta variable CSS d’accent */
+    font-size: 2.5rem;
+  }
+  .sous-titre {
+    margin-top: 1rem;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .texte-accroche {
+    font-size: 1.3rem;
+    font-style: italic;
+    color:black;
+  }
+  

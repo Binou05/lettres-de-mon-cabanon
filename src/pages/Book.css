@@ -1,0 +1,168 @@
+/* === Cadre global === */
+.book-hero {
+  /* Remplace ce dégradé par celui que tu veux */
+  background: linear-gradient(to bottom, #f8f4f0 0%, #e2d8c3 50%, #d0c2a3 100%);
+}
+.book-content {
+  background-color: #fcf9e0; /* crème clair, à ajuster si besoin */
+  /* Optionnel : un padding global pour respirer */
+  
+  padding-bottom: 2rem;
+}
+
+.book-frame {
+    max-width: 900px;
+    margin: 0.3rem auto;
+    padding: 2rem;
+    background: #eabe6648;
+    border: 2px solid #bfae90;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* === Nicer background gradient === */
+  .book-page {
+   
+    background: linear-gradient(
+      to bottom,
+      #f8f4f0 0%,
+      #e2d8c3 50%,
+      #d0c2a3 100%
+    );
+    padding-bottom: 1rem;
+  }
+  /* Titre au-dessus des livres */
+.books-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2f6b94;
+    margin-bottom: 1.5rem;
+  }
+  /* === Couvertures === */
+  .book-covers {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .book-cover {
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  
+  .book-cover img {
+    width: 180px;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    object-fit: contain;
+    /* On garde le zoom au hover si tu veux */
+    transition: transform 0.3s ease;
+  }
+  
+  .book-cover:hover img {
+    transform: scale(1.05);
+  }
+  
+  .book-cover figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  /* === Section À propos === */
+  .book-about {
+    margin-top: 3rem;
+  }
+  
+  .book-about h1 {
+    text-align: center;
+    color: #2f6b94;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .separator {
+    width: 60%;
+    height: 1px;
+    background: rgba(86, 89, 115, 0.3);
+    margin: 0.5rem auto 2rem;
+  }
+  
+  /* === Intro en deux colonnes === */
+  .about-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 auto 2rem;       /* auto à gauche/droite pour centrer */
+  max-width: 600px;           /* tu ajustes selon ton goût */
+  text-align: left;  
+  }
+  
+  .image-papa {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
+  
+  .intro-text {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;           /* plus grand */
+    font-weight: 700;          /* semi-bold */
+    line-height: 1.2;          /* serré pour un titre */
+    color: #2f6b94;            /* même bleu que le titre principal */
+    margin: 0;
+    white-space: nowrap;       /* une ligne sans retour auto */
+  }
+  
+  /* === Le reste du texte === */
+  .about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .nom-auteur {
+    text-align: right;
+    font-weight: 500;
+    color: #2f6b94;
+    margin-top: 2rem;
+  }
+  
+  /* === Responsive === */
+  @media (max-width: 600px) {
+    .about-intro {
+      flex-direction: column;
+      text-align: center;
+    }
+    .about-intro p {
+      margin-top: 1rem;
+    }
+    .book-covers {
+      gap: 1rem;
+    }
+    .book-cover img {
+      width: 140px;
+    }
+  }
+  @media (max-width: 600px) {
+    .intro-text {
+      font-size: 1.5rem;
+      white-space: normal;
+      text-align: center;
+    }
+  }
+  @media (max-width: 600px) {
+    .books-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
