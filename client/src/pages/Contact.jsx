@@ -22,8 +22,8 @@ export default function Contact() {
               <p className="text-contact">
                 <strong>
                   Contactez-moi pour plonger ensemble dans les vagues de nos
-                  réflexions, naviguant sur les mers d’encre et de sel de ce
-                  récit.
+                  réflexions, naviguant sur les mers d’encre et de sel de ces
+                  récits.
                 </strong>
               </p>
 

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../assets/images/logo.png";
-
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -37,7 +37,13 @@ export default function Navbar() {
             <a href="/book">Livre</a>
           </li>
           <li>
+            <a href="/buy">Acheter</a>
+          </li>
+          <li>
             <a href="/contact">Contact</a>
+          </li>
+          <li>
+            <Link to="/admin">Admin</Link>
           </li>
         </ul>
       </div>

@@ -1,40 +1,19 @@
-/* src/components/Footer.css */
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40px;       /* ou ce que tu veux */
-  z-index: 1000;
+.site-footer {
+  background:#0f4e6f;
+  color:#fff;
+  padding: 14px 16px;
 }
-.footer-content {
-  width: 100%;
-  text-align: center;
-  /* pas de margin/padding qui créerait du blanc en dessous */
-  padding: 0;
+.footer-inner {
+  display:flex; 
+  flex-wrap:wrap;
+  align-items:center; 
+  justify-content:center; 
+  gap:.5rem 1rem;
 }
-  .footer-content p {
-    margin: 0;
-    font-size: 0.9rem;
-  }
-  
-  .footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0.75rem 0 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .footer-links a {
-    color: #ffd166;              /* accent clair */
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: opacity 0.2s;
-  }
-  
-  .footer-links a:hover {
-    opacity: 0.75;
-  }
-  
+.footer-legal a {
+  color:#fff; 
+  text-decoration:none;
+  opacity:.9;
+}
+.footer-legal a:hover { text-decoration:underline; opacity:1; }
+

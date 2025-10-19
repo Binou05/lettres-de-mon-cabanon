@@ -1,50 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <!-- Icônes -->
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/logo.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta name="theme-color" content="#004f71" />
+
+    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+
+    <!-- SEO par défaut (chaque page le surchargera via Helmet) -->
+    <title>Encre de sel</title>
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Encre de sel — Lettres de mon cabanon - Histoires d'eaux . Récits d’un écrivain de Provence : pêche, cabanon, mer Méditerranée."
     />
+    <meta
+      name="keywords"
+      content="écrivain, récits, mer Méditerranée, cabanon, Provence, pêche, tradition orale, Richard Arnaud"
+    />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:site_name" content="Encre de sel" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Encre de sel" />
+    <meta
+      property="og:description"
+      content="Lettres de mon cabanon — récits de mer et de Provence par Richard Arnaud."
+    />
+    <meta property="og:image" content="%PUBLIC_URL%/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Canonical (remplacer par ton domaine en prod) -->
+    <link rel="canonical" href="https://encre-de-sel.fr/" />
+
+    <!-- (Optionnel) Font Awesome – retirer l’attribut integrity si tu changes d’URL/version -->
     <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  integrity="sha512-…"
-  crossorigin="anonymous"
-/>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- JSON-LD Organization + Website -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Encre de sel",
+        "url": "https://encre-de-sel.fr",
+        "logo": "https://encre-de-sel.fr/logo.png",
+        "sameAs": []
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Encre de sel",
+        "url": "https://encre-de-sel.fr",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://encre-de-sel.fr/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>Vous devez activer JavaScript pour utiliser cette application.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

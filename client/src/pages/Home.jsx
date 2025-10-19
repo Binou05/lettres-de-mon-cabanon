@@ -1,26 +1,35 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import "./Home.css";
-import heroImg from "../assets/images/Lettres-de-mon-cabanon1.png"; 
+
+import heroImg from "../assets/images/Lettres-de-mon-cabanon1.png";
+import photopapa from "../assets/images/photopapa.jpg";
 
 function Home() {
   return (
     <>
-      <Navbar />
       <header
-        className="hero fullbleed h-100vh"
+        className="hero fullbleed between-nav-footer"
         style={{ backgroundImage: `url(${heroImg})` }}
       >
+        <div className="papa-frame">
+          <img
+            src={photopapa}
+            alt=""
+            aria-hidden="true"
+            className="papa-deco"
+            loading="lazy"
+          />
+        </div>
+
         <div className="hero-overlay">
           <h1>
-            <span>Richard Arnaud</span>
+            <span>Richard ARNAUD</span>
             <br />
-            <span className="couleur-accent">
-              Lettres de mon cabanon
-              <br />
-              “Histoires d’eaux”
-            </span>
+            <span className="couleur-accent line1">Lettres de mon cabanon</span>
+            <br />
+            <span className="couleur-accent line2">“Histoires d’eaux”</span>
           </h1>
+
           <div className="sous-titre">
             <span className="texte-accroche">
               Des récits aux parfums de vérité, des contes du Midi !

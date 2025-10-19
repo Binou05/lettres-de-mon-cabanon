@@ -1,108 +1,79 @@
-/* ==========================================================================
-   1) Reset global & box-sizing
-   ========================================================================== */
-   *,
-   *::before,
-   *::after {
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
-   }
-   
-   /* ==========================================================================
-      2) Full-height, full-width & overflow
-      ========================================================================== */
-   html,
-   body {
-     width: 100%;
-     height: 100%;
-     overflow-x: hidden;
-   }
-   
-   #root {
-     min-height: 100%;
-   }
-   
-   /* ==========================================================================
-      3) Variables thématiques
-      ========================================================================== */
-   :root {
-     --color-primary:   #054766;
-     --navbar-height:   60px;
-     --footer-height:   40px;
-     --padding-page:    1rem;
-   }
-   
-   /* ==========================================================================
-      4) Layout principal : navbar / contenu / footer
-      ========================================================================== */
-   .page-container {
-     display: flex;
-     flex-direction: column;
-     min-height: 100vh;
-   }
-   
-   .navbar {
-     position: fixed;
-     top: 0; left: 0; right: 0;
-     height: var(--navbar-height);
-     background: var(--color-primary);
-     z-index: 1000;
-   }
-   
-   .page-content {
-     flex: 1;
-    
-     margin-bottom: var(--footer-height);
-     padding: var(--padding-page);
-     overflow-y: auto;
-   }
-   
-   .footer {
-     position: fixed;
-     bottom: 0; left: 0; right: 0;
-     height: var(--footer-height);
-     background: var(--color-primary);
-     color: #fff;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     z-index: 1000;
-   }
-   
-   /* ==========================================================================
-      5) Mobile-first & media queries
-      ========================================================================== */
-   @media (min-width: 768px) {
-     .page-content {
-       padding: 2rem;
-     }
-   }
-   
-   /* ==========================================================================
-      6) Full-bleed utility (bord à bord horizontal + backgrounds)
-      ========================================================================== */
-      .fullbleed {
-        position: relative;
-      
-        /* 100% de la largeur de la fenêtre viewport */
-        width: 100vw;
-      
-        /* on centre la boîte sur son parent */
-        left: 50%;
-        margin-left: -50vw;
-      
-        overflow: hidden;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-      }
-      
-   
-   /* hauteurs standard pour tes sections : */
-   .fullbleed.h-100vh { height: 100vh; }
-   .fullbleed.h-98vh  { height: 98vh;  }
-   .fullbleed.h-96vh  { height: 96vh;  }
-   .fullbleed.h-94vh  { height: 94vh;  }
-   .fullbleed.h-90vh  { height: 90vh;  } 
-   .fullbleed.h-60vh  { height: 60vh;  }
+/* ===================== 1) Reset & base ===================== */
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html,body,#root{ height:100%; width:100%; overflow-x:hidden; }
+
+/* ===================== 2) Variables ======================== */
+:root{
+  --color-primary:#054766;
+  --navbar-height:60px;     /* mets la vraie hauteur rendue */
+  --footer-height:48px;     /* idem */
+  --padding-page:1rem;
+  --content-max:1100px;     /* largeur max pour le contenu centré */
+}
+
+/* ===================== 3) Layout global ==================== */
+.page-container{
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* NAVBAR fixe */
+.navbar{
+  position:fixed; top:0; left:0; right:0;
+  height:var(--navbar-height);
+  background:var(--color-primary); color:#fff;
+  z-index:1000;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 1rem;
+}
+
+/* CONTENU : pousse le footer en bas et compense la navbar fixe */
+.page-content{
+  flex:1 0 auto;
+  min-height:calc(100svh - var(--navbar-height) - var(--footer-height));
+  padding:calc(var(--navbar-height) + var(--padding-page)) var(--padding-page) var(--padding-page);
+  display:flex; justify-content:center; align-items:center; /* centre si peu de contenu */
+}
+
+/* conteneur optionnel pour limiter la largeur des pages (Admin, Buy…) */
+.page-content .container{
+  width:100%; max-width:var(--content-max); margin:0 auto;
+}
+
+/* FOOTER : toujours en bas sans position:fixed */
+.site-footer{
+  margin-top:auto;
+  height:var(--footer-height);
+  background:var(--color-primary); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:0 1rem; font-size:.9rem;
+}
+
+
+
+/* ===================== 4) Full-bleed util =================== */
+.fullbleed{
+  position:relative;
+  width:100vw;
+  left:50%; margin-left:-50vw;
+  overflow:hidden;
+  background:no-repeat center / cover;
+}
+
+/* Hauteurs utilitaires (évite 100vh) */
+.fullbleed.h-100vh{ height:100svh; }
+.fullbleed.h-98vh { height:98svh;  }
+.fullbleed.h-96vh { height:96svh;  }
+.fullbleed.h-94vh { height:94svh;  }
+.fullbleed.h-90vh { height:90svh;  }
+.fullbleed.h-60vh { height:60svh;  }
+
+/* ===================== 5) Responsive ======================= */
+@media (min-width:768px){
+  .page-content{ padding:calc(var(--navbar-height) + 2rem) 2rem 2rem; }
+}
+.between-nav-footer{
+  min-height: calc(100svh - var(--navbar-height) - var(--footer-height));
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+}

@@ -1,7 +1,6 @@
 // src/pages/About.jsx
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 import "./About.css";
 import background from "../assets/images/background-bio.png";
 import photoRichard from "../assets/images/Image-papa.jpg";
@@ -29,9 +28,7 @@ import photovieuxmiramasprovençale from "../assets/images/photovieuxmiramasprov
 import videoStAndiol from "../assets/videos/StAndiol.mp4";
 import videoVieuxMiramas from "../assets/videos/VieuxMiramas.mp4";
 
-
 export default function About() {
-
   const [tab, setTab] = useState("bio");
   const [modalImg, setModalImg] = useState(null);
   const [scale, setScale] = useState(1);
@@ -52,14 +49,13 @@ export default function About() {
     photogaleriePaulette,
     photomiramasvernissage,
   ];
-  
+
   const [stAndiolAffiche, stAndiolPhoto] = [
     afficheStAndiol,
     photoStAndiol,
     photostandiolAnne,
   ];
 
- 
   const articles = [
     { src: articleArnaud, caption: "La Provence, 24 déc. 2024" },
     { src: articleProv, caption: "La Provence, 30 avr. 2025" },
@@ -75,23 +71,25 @@ export default function About() {
 
   const zoomIn = () => setScale((s) => Math.min(s + 0.2, 3));
   const zoomOut = () => setScale((s) => Math.max(s - 0.2, 0.5));
+
+  const isBio = tab === "bio";
   return (
     <>
-      <Navbar />
-
       <main
-        className={`page-content 
-          ${tab !== "gallery" ? "fullbleed" : ""}
-       ${tab === "gallery" ? "gallery-bg" : ""} `
-        }
+        className={`page-content about ${tab === "bio" ? "is-bio" : ""} ${
+          tab === "gallery" ? "gallery-bg" : ""
+        }`}
         style={
-          tab !== "gallery"
-            ? { backgroundImage: `url(${background})` }
+          tab === "bio"
+            ? {
+                backgroundImage: `url(${background})`,
+                backgroundColor: "#E8D8BD", // crème identique au fond du visuel
+              }
             : {}
         }
       >
         {/* On décale la carte plus haut */}
-        <div className="about__card" style={{ marginTop: "30vh" }}>
+        <div className="about__card" style={{ marginTop: "19vh" }}>
           <div className="about__tabs">
             {[
               { id: "bio", label: "Bio" },
@@ -128,7 +126,7 @@ export default function About() {
                   They de Brûle-Tabac, les pas-de-portes se muent en Agora : au
                   coin des cabanons, il découvre récits rocambolesques et faits
                   divers toujours certifiés vrais… même quand ils défient
-                  l’entendement !
+                  l’entendement. 
                 </p>
                 <p>
                   Admirateur de Mistral, Daudet, Pagnol et des félibres, il
@@ -201,9 +199,7 @@ export default function About() {
               <div className="gallery-block">
                 <img
                   className="block-main"
-                  src={
-                    afficheVieuxMiramas /* remplace par vraie image VieuxMiramas si différente */
-                  }
+                  src={afficheVieuxMiramas}
                   alt="Image Vieux Miramas"
                 />
                 <div className="block-subs">
@@ -307,8 +303,6 @@ export default function About() {
           )}
         </div>
       </main>
-
-      <Footer />
     </>
   );
 }

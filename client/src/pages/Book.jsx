@@ -1,7 +1,6 @@
 // src/pages/Book.jsx
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 import BookCarousel from "../components/BookCarousel";
 import "./Book.css";
 
@@ -9,13 +8,16 @@ import coverVerso from "../assets/images/photo-verso-livre.jpg";
 import coverRecto from "../assets/images/photo-recto-livre.jpg";
 import imagePapa from "../assets/images/Image-papa.jpg";
 
+
 export default function Book() {
   const [open, setOpen] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
 
+  
   return (
     <>
-      <Navbar />
+     
+   
 
       {/* 1) Hero full-bleed pour le background dégradé */}
       <div className="book-hero" />
@@ -102,7 +104,7 @@ export default function Book() {
         </div>
       </main>
 
-      <Footer />
+    
 
       {open && (
         <BookCarousel startIndex={startIndex} onClose={() => setOpen(false)} />

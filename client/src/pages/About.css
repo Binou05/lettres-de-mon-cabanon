@@ -1,579 +1,663 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap');
 
-/* src/pages/About.css */
-
-/* Variables & reset partiel */
-:root {
+/* ===============================
+   Variables & base About
+   =============================== */
+:root{
   --navbar-height: 60px;
   --card-max-width: 800px;
   --gap: 1rem;
 }
-.about {
+
+.about{
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - var(--navbar-height));
+  padding-bottom: 6vh;
 }
 
-/* 1. Hero full-screen */
-.about__hero {
-  flex: 0 0 50vh;
-  background: center/cover no-repeat;
-}
+/* (héritage ancien, je ne touche pas) */
+.about__hero{ flex: 0 0 50vh; background: center/cover no-repeat; }
 
-/* 2. Card centrée, recouvrant partiellement le Hero */
-.about__card {
-  /* NOUVEAU : blanc opaque */
+/* Carte générique (autres onglets) — inchangé */
+.about__card{
   background: transparent;
-  /* si tu veux un tout petit peu de transparence : */
- 
-  
-  /* le reste inchangé */
   position: relative;
   top: calc(-25vh);
   margin: 0 auto var(--gap);
   width: 100%;
   max-width: var(--card-max-width);
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   padding: var(--gap);
 }
 
 
-/* 3. Onglets */
-.about__tabs {
+/* Onglets génériques (autres onglets) — inchangé */
+.about__tabs{
   position: absolute;
-  margin-bottom: 3rem; 
+  margin-bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
- 
-  padding: 0.5rem 1rem;
-  border-radius: 8px 8px 0 0;       /* si tu veux un style d’onglets collés */
-  padding: 0.75rem 1.5rem 0.5rem; 
-}       /* un petit padding pour l’espace interne */
-.about__tabs + * {
-  margin-top: 3.5rem;  /* 2rem ou 3rem selon l’espacement désiré */
+  padding: 0.75rem 1.5rem 0.5rem;
+  border-radius: 8px 8px 0 0;
 }
+.about__tabs + *{ margin-top: 3.5rem; }
 
-.about__tabs button {
-  background-color:  #ac2b2be6;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: #2f6b94;
- border-bottom: 2px solid transparent;
-  cursor: pointer;
-  transition: color 0.2s, border-color 0.2s;
-  margin-bottom: 2rem; 
-  margin-top: 2rem;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-  
-}
-.about__tabs button.active {
-  font-weight: bold;
-  border-color: #2f6b94;
-}
-
-
-/* Titre secondaire dans la bio */
-.about__bio-title {
-  font-size: 1.75rem;
-  color: #2f6b94;        /* même bleu que tes onglets */
-  text-align: center;    /* ou left si tu préfères */
-  margin-top: 2rem;
-  margin-bottom: 3rem; /* espace avant les photos */
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.about__bio-photos {
-  display: flex;
-  gap: 1rem; 
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 18px;
- 
-}
-.about__bio-photos img {
-  width: auto;                  /* laisse la largeur s’ajuster */
-  height: 200px;                /* nouvelle hauteur désirée */
-  object-fit: cover;
-
-}
-.about__bio-text {
-  text-align: left; /* plus lisible qu'un centrage complet */
-  max-width: 800px; /* limite la largeur pour la lecture */
-  margin: 0 auto; 
-  
-}
-.about__bio-text p {
-  margin-bottom: 1.2rem;
-  margin-right: 1.2rem;
-}
-/* 5. Articles */
-.about__articles h2 {
-  text-align: center;
-  margin-bottom: 3rem;
-  margin-top: 5rem;
-  color: #2f6b94;
-}
-.articles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  justify-content: center;
-  justify-items: center; 
-}
-
-
-/* 4. La légende occupe un bloc fixe en bas */
-
-.articles-grid figure {
-  width: 260px;
-  background: #ffffff05;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-.articles-grid img {
-  width: 100%;
-}
-.articles-grid figcaption {
-  text-align: center;
-  padding: 0.5rem;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* ====== Galerie épurée ====== */
-.gallery-bg {
-  /* simple fond crème */
-  background-color: 
-  
-    #eedeb282;
-}
-.about__gallery {
-  padding: 2rem 1rem;
-  max-width: 1900px;
-  margin: 0 auto;
-  background: transparent;
-
-}
-
-/* Titre centré + espacé */
-.about__gallery > h2 {
-  text-align: center;
-  margin-bottom: 3rem;
-  margin-top: 3rem;
-  color: var(--color-primary);
-}
-
-/* Chaque « bloc » (Vieux Miramas, etc.) est désormais une grille verticale */
-.about__gallery .gallery-block {
-  margin-bottom: 2rem;
-}
-
-/* Affiche principale, 100% largeur de son bloc */
-.about__gallery .block-main {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;
-}
-
-/* Les vignettes (photos + vidéo) côte-à-côte */
-.about__gallery .block-subs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-}
-
-/* Style des vignettes */
-.about__gallery .block-subs img,
-.about__gallery .block-subs video {
-  width: 100%;
-  height: 250px;           /* un poil plus grand */
-  object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-.about__gallery .block-video {
-  
-  margin-top: 0rem;
-}
-/* 7. Media queries */
-@media (min-width: 768px) {
-  .about__bio {
-    flex-direction: row;
-    text-align: left;
-  }
-  .about__bio-photos img {
-    width: 140px;
-  }
-  .about__bio-text {
-    max-width: 60%;
-  }
-  .about__card {
-    top: calc(-25vh);
-  }
-}
-
-@media (min-width: 1366px) {
-  .about__hero {
-    flex: 0 0 60vh;
-  }
-  .about__card {
-    top: calc(-30vh);
-  }
-  .about__bio-photos img {
-    width: 180px;
-  }
-}
-/* Onglets centrés */
-.about__tabs {
-  display: flex;
-  justify-content: center;
-  gap: var(--gap);
-  
-  /* 1) largeur auto pour ne coller qu’au texte */
-  width: max-content;
-  
-  /* 2) margin auto pour centrer dans la carte */
-  margin: -1.5rem auto 1rem;
-  
-  /* plus de fond derrière */
-  background: transparent;
-  padding: 0;
-}
-
-/* Styles des boutons onglet */
-.about__tabs button {
-  background-color: rgba(245, 222, 179, 0.9);
+.about__tabs button{
+  background-color: rgba(245,222,179,0.9);
   border: none;
   color: #092a64;
   font-size: 1rem;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
   cursor: pointer;
- 
+  border-bottom: 2px solid transparent;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+.about__tabs button.active{
+  font-weight: 700;
+  border-color: #054766;
 }
 
-.about__tabs button.active {
-  border-bottom: 2px solid #054766;
-  font-weight: bold;
-}
-/* 1) Conteneur responsive : garder les images à la taille max de leur bloc */
-.articles-grid img,
-.about-gallery .gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;          /* indicateur de survol */
-}
 
-/* 2) Zoom au hover */
-.articles-grid figure:hover img,
-.about-gallery .gallery-item:hover img {
-  transform: scale(1.1);    /* zoom à 110% */
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+/* ===============================
+   BIO — SCOPÉE (ne touche pas les autres)
+   =============================== */
+
+/* Fond Bio : même crème que le papier + image de fond */
+.is-bio{
+  background-color: #f6efe1;
+
+  background-repeat: no-repeat;
+  background-position: center top;
+  min-height: 100vh;
 }
 
-/* 3) Pour que l’image reste bien centrée pendant le zoom */
-.articles-grid figure,
-.about-gallery .gallery-item {
-  overflow: hidden;
-  border-radius: 8px;       /* même coins ronds que tes cartes */
-}
-
-/* 4) Responsive : ajuster le nombre de colonnes */
-@media (max-width: 768px) {
-  .articles-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .articles-grid figure {
-    width: 90%;
-    margin-bottom: 1.5rem;
-  }
-
-  .about-gallery {
-    grid-template-columns: 1fr; /* une seule colonne */
+/* Mobile d’abord : remplir l’écran agréablement */
+@media (max-width: 600px){
+  .is-bio{
+    background-size: cover;           /* plein écran (peut rogner) */
+    background-position: center 40px; /* décale sous la navbar */
   }
 }
 
-@media (min-width: 769px) and (max-width: 1365px) {
-  .about-gallery {
-    grid-template-columns: repeat(2, 1fr);
+/* Tablette : montrer tout le visuel */
+@media (min-width: 601px) and (max-width: 1024px){
+  .is-bio{
+    background-size: contain;         /* stylo & ancre visibles */
+    background-position: center top;
   }
 }
 
-@media (min-width: 1366px) {
-  .about-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+/* Desktop : cadrage léger vers la droite */
+@media (min-width: 1025px){
+  .is-bio{
+    background-size: contain;
+    background-position: 30 0;
   }
 }
-/* responsive */
-@media (max-width: 768px) {
-  .about__gallery {
-    gap: 2rem;
-    padding: 1rem;
-  }
-  .about__gallery .gallery-block {
-    max-width: 280px;
-    gap: 0.75rem;
-  }
-  .about__gallery h2 {
-    font-size: 1.6rem;
-  }
-}
-/* src/pages/About.css */
 
-
-/* 1) thumbnail cursor */
-.article-thumb img {
-  cursor: zoom-in;
-}
-
-/* 2) overlay plein écran */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-/* 3) contenu du modal */
-.modal-content {
+/* Carte Bio (juste pour la Bio) */
+.is-bio .about__card{
+  background: transparent;
   position: relative;
-  max-width: 100vw;
-  max-height: 120vh;
-  background: #fff;
+  top: -18vh;
+  margin: 0 auto var(--gap);
+  width: 100%;
+  max-width: var(--card-max-width);
   border-radius: 8px;
-  overflow: hidden;
-  padding: 1rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-  
-}
-
-/* 4) zone image scrollable / zoomable */
-.modal-img-container {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  cursor: zoom-out;
-}
-
-/* 5) l’image prend tout l’espace possible */
-.modal-img-container img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  /* permet le pinch-to-zoom sur mobile */
-  touch-action: pan-x pan-y;
-}
-
-/* 6) bouton de fermeture */
-.modal-close {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.75rem;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  line-height: 1;
-  color: #333;
-  cursor: pointer;
-  z-index: 1;
-}
-/* overlay plein écran */
-.modal-overlay {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-
-/* image zoomable */
-.modal-content img {
-  width: 100%;
-  height: 80vh;
-  transition: transform 0.2s ease;
-  transform-origin: center center;
-}
-
-/* contrôles de zoom et fermeture */
-.modal-controls {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.modal-controls button {
-  padding: 0.25rem 0.5rem;
-  font-size: 1.2rem;
-  background: #2f6b94;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-/* Overlay plein écran2 */
-.modal-overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-/* Contenu du modal (boîte blanche) */
-.modal-content {
-  position: relative;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-
-  /* on limite la taille au viewport */
-  width: 95vw;
-  max-width: 1200px;
-  height: 95vh;
-  max-height: 95vh;
-
-  /* on active le scroll interne si besoin */
-  overflow: auto;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* L’image du modal */
-.modal-content img {
-  /* on laisse l’image monter jusqu’à la taille max du conteneur */
-  max-width: 100%;
-  max-height: calc(95vh - 4rem); /* on enlève l’espace pour les contrôles (+ marge) */
-  object-fit: contain;
-  margin-bottom: 1rem;
-  transition: transform 0.2s;
-}
-
-/* Les contrôles (zoom + / – / fermer) */
-.modal-controls {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.modal-controls button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  line-height: 1;
-  padding: 0.25rem;
-  color: #2f6b94;
-  transition: color 0.2s;
-}
-
-.modal-controls button:hover {
-  background: #1b4f6b;
-}
-/* 1) Autorise l’affichage hors du cadre */
-.modal-content {
-  position: relative; /* pour positionner absolument à l’intérieur */
-  overflow: visible;  /* on laisse dépasser l’image et les boutons */
-}
-
-/* 2) Positionne les contrôles en haut à droite */
-.modal-controls {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;     /* ou left:0.5rem pour à gauche */
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  z-index: 10;       /* devant l’image */
-}
-
-/* 3) Styles des boutons (petit cercle) */
-.modal-controls button {
-  background: rgba(0, 0, 0, 0.4);
-  border: none;
-  color: #fff;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.modal-controls button:hover {
-  background: rgba(0, 0, 0, 0.6);
-}
-.block-video {
-  width: 100%;
-  max-width: 600px;   /* ou la taille que tu préfères */
-  margin: 1rem auto 2rem;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Responsive : vidéo plus petite sur mobile */
-@media (max-width: 600px) {
-  .block-video {
-    max-width: 100%;
-    margin: 1rem 0;
-  }
-}
-/* 1) Le conteneur .about__bio reste en flex-col */
-/* Trouve cette règle (ou ajoute-la) */
-.about__bio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* Remplace var(--gap) par un espacement plus petit, p.ex. 0.5rem */
-  gap: 0.5rem;            
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
   padding: var(--gap);
 }
+@media (min-width: 768px){  .is-bio .about__card{ top: -30vh; } }
+@media (min-width: 1366px){ .is-bio .about__card{ top: -26vh; } }
 
+/* Onglets dans la Bio : propres, centrés, pas en absolute */
+.is-bio .about__tabs{
+  position: relative;                 
+  left: 50%;
+  transform: translateX(-50%);       
+  width: min(92vw, 720px);            
+  max-width: 720px;
 
-/* 2) Ton titre bio aligné au centre de la carte */
-.about__bio-title {
-  width: 100%;            /* prend toute la largeur interne de la carte */
-  text-align: center;     /* centre le texte à l’intérieur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+  flex-wrap: wrap;                     
+
+  margin: 0 auto 14px;                
+  padding: .55rem .8rem;
+
+  background: rgba(232,216,189,.92);   
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.12);
+  z-index: 3;                          
+}
+.is-bio .about__tabs::-webkit-scrollbar{ display:none; }
+
+.is-bio .about__tabs button{
+  white-space: nowrap;
+  border: 1px solid #d8c9a6;
+  border-radius: 999px;
+  background: #f6efe1;
+  color: #0e4f71;
+  font-size: .95rem;
+  padding: .45rem .8rem;
+  cursor: pointer;
+}
+.is-bio .about__tabs button.active{
+  background: #0e4f71;
+  color: #fff;
+  border-color: #0e4f71;
+}
+
+/* Titre Bio : cartouche lisible sur l’image */
+.is-bio .about__bio-title{
+  width: max-content;
+  max-width: 92%;
+  margin: .8rem auto 1rem;
+  text-align: center;
+  color: #0e4f71;
+  font-size: clamp(1.3rem, 4.6vw, 2rem);
+  display: inline-block;
+  padding: .14em .5em;
+  background: rgba(246,239,225,.92);
+  border-radius: .5em;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  text-shadow: 0 1px 0 rgba(255,255,255,.7);
+}
+
+/* Zone photos / texte */
+.is-bio .about__bio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+  padding: var(--gap);
+}
+.is-bio .about__bio-photos{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.is-bio .about__bio-photos img{
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+  display: block;
+}
+.is-bio .about__bio-text{
+  max-width: 72ch;     /* largeur confortable pour la lecture */
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.6;
+}
+.is-bio .about__bio-text p{ margin-bottom: 1rem; }
+
+/* Tablette : un peu plus d’air */
+@media (min-width: 601px) and (max-width: 900px){
+  .is-bio .about__tabs{ padding: .6rem .9rem; }
+  .is-bio .about__tabs button{ font-size: .98rem; }
+  .is-bio .about__bio-title{
+    font-size: clamp(1.45rem, 3.6vw, 1.9rem);
+    padding: .16em .6em;
+  }
+}
+
+/* Desktop : onglets façon “pills” discrets (comme avant) */
+@media (min-width: 901px){
+  .is-bio .about__tabs{
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: -1rem auto 1rem;
+  }
+  .is-bio .about__tabs button{
+    border: 0;
+    border-radius: 8px;
+    background: rgba(245,222,179,.9);
+    color: #092a64;
+  }
+  .is-bio .about__tabs button.active{
+    background: rgba(245,222,179,.9);
+    border-bottom: 2px solid #054766;
+    color: #092a64;
+  }
+}
+
+/* ===============================
+   ———  SECTIONS INCHANGÉES  ———
+   (Articles / Galerie / Modale)
+   =============================== */
+
+/* Titre secondaire dans la bio (conserve ton style générique) */
+.about__bio-title{
   font-size: 1.75rem;
   color: #2f6b94;
-  margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
   font-weight: 600;
   line-height: 1.2;
 }
+.about__bio-photos{ display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; padding-bottom:10px; }
+.about__bio-photos img{ width:auto; height:200px; object-fit:cover; }
+.about__bio-text{ text-align:left; max-width:800px; margin:0 auto; }
+.about__bio-text p{ margin-bottom:1.2rem; margin-right:1.2rem; }
 
-/* 3) Les photos n’ont plus besoin de margin-left négatif */
-.about__bio-photos {
+/* ARTICLES — inchangé */
+.about__articles h2{ text-align:center; margin-bottom:3rem; margin-top:5rem; color:#2f6b94; }
+.articles-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; justify-content:center; justify-items:center; }
+.articles-grid figure{ width:260px; background:#ffffff05; border-radius:8px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+.articles-grid img{ width:100%; }
+.articles-grid figcaption{ text-align:center; padding:.5rem; font-size:.9rem; color:#555; }
+
+/* GALERIE — inchangé */
+.gallery-bg{ background-color:#eedeb282; }
+.about__gallery{ padding:2rem 1rem; max-width:1900px; margin:0 auto; background:transparent; }
+.about__gallery>h2{ text-align:center; margin:3rem 0; color:var(--color-primary); }
+.about__gallery .gallery-block{ margin-bottom:2rem; }
+.about__gallery .block-main{ width:100%; height:auto; border-radius:8px; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,.1); margin-bottom:1rem; }
+.about__gallery .block-subs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; }
+.about__gallery .block-subs img,
+.about__gallery .block-subs video{ width:100%; height:250px; object-fit:cover; border-radius:4px; box-shadow:0 2px 6px rgba(0,0,0,.08); }
+.about__gallery .block-video{ margin-top:0; }
+
+@media (max-width:768px){
+  .about__gallery{ gap:2rem; padding:1rem; }
+  .about__gallery .gallery-block{ max-width:280px; gap:.75rem; }
+  .about__gallery h2{ font-size:1.6rem; }
+}
+
+/* MODALE — inchangé */
+.article-thumb img{ cursor: zoom-in; }
+.modal-overlay{ position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); display:flex; align-items:center; justify-content:center; z-index:1000; }
+.modal-content{ position:relative; max-width:100vw; max-height:120vh; background:#fff; border-radius:8px; overflow:hidden; padding:1rem; box-shadow:0 8px 24px rgba(0,0,0,.5); }
+.modal-img-container{ width:100%; height:100%; overflow:auto; cursor:zoom-out; }
+.modal-img-container img{ width:100%; height:100%; display:block; touch-action: pan-x pan-y; }
+.modal-close{ position:absolute; top:.5rem; right:.75rem; background:none; border:none; font-size:2rem; line-height:1; color:#333; cursor:pointer; z-index:1; }
+
+.modal-overlay{ top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,.6); }
+.modal-content img{ width:100%; height:80vh; transition:transform .2s ease; transform-origin:center; }
+.modal-controls{ display:flex; justify-content:center; gap:.5rem; margin-top:.5rem; }
+.modal-controls button{ padding:.25rem .5rem; font-size:1.2rem; background:#2f6b94; color:#fff; border:none; border-radius:4px; cursor:pointer; }
+
+.modal-content{ width:95vw; max-width:1200px; height:95vh; max-height:95vh; overflow:auto; padding:1rem; display:flex; flex-direction:column; align-items:center; }
+.modal-content img{ max-width:100%; max-height:calc(95vh - 4rem); object-fit:contain; margin-bottom:1rem; transition:transform .2s; }
+.modal-controls{ display:flex; gap:.5rem; align-items:center; }
+.modal-controls button{ background:none; border:none; cursor:pointer; font-size:1.5rem; line-height:1; padding:.25rem; color:#2f6b94; transition:color .2s; }
+.modal-controls button:hover{ background:#1b4f6b; }
+
+.modal-content{ position:relative; overflow:visible; }
+.modal-controls{ position:absolute; top:.5rem; right:.5rem; display:flex; flex-direction:column; gap:.5rem; z-index:10; }
+.modal-controls button{ background:rgba(0,0,0,.4); color:#fff; width:2.5rem; height:2.5rem; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+.modal-controls button:hover{ background:rgba(0,0,0,.6); }
+
+.block-video{ width:100%; max-width:600px; margin:1rem auto 2rem; display:block; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.1); }
+@media (max-width:600px){ .block-video{ max-width:100%; margin:1rem 0; } }
+
+/* Bio layout de base (héritage) — conservé */
+.about__bio{ display:flex; flex-direction:column; align-items:center; gap:.5rem; padding:var(--gap); }
+/* =========================
+   ONGLETS (commun à tous)
+   ========================= */
+.about .about__tabs{
+  /* centrés, sur une seule ligne si place, sinon ils vont à la ligne */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:.8rem;
+
+  /* centrage horizontal + petit espace sous les onglets */
+  width:fit-content;
+  max-width:100%;
+  margin:0 auto 1rem;
+
+  /* sécurité micro-écrans : on peut scroller horizontalement si besoin */
+  overflow-x:auto;
+}
+.about .about__tabs::-webkit-scrollbar{ display:none; }
+
+/* style “pilule” neutre (valable partout) */
+.about .about__tabs button{
+  appearance:none;
+  border:1px solid #d8c9a6;
+  background:#f6efe1;               /* crème doux */
+  color:#0e4f71;                     /* bleu Encre de sel */
+  padding:.45rem .9rem;
+  border-radius:999px;
+  font:600 0.95rem/1 "Open Sans", system-ui, sans-serif;
+  cursor:pointer;
+  transition:background .2s, color .2s, box-shadow .2s, border-color .2s;
+  white-space:nowrap;
+  box-shadow:0 1px 0 rgba(255,255,255,.6), 0 6px 14px rgba(0,0,0,.08);
+}
+.about .about__tabs button:hover{
+  background:#f2e7d1;
+}
+.about .about__tabs button.active{
+  background:#0e4f71;
+  color:#fff;
+  border-color:#0e4f71;
+  box-shadow:0 8px 18px rgba(14,79,113,.25);
+}
+
+/* =========================
+   VARIANTE “Bio” seulement
+   ========================= */
+.about.is-bio .about__tabs{
+  /* petite cartouche sous les onglets pour mieux ressortir sur l’image */
+  padding:.5rem .75rem;
+  background:rgba(232,216,189,.92);
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.10);
+}
+
+/* =========================
+   VARIANTE “Articles / Affiches”
+   (autres onglets)
+   ========================= */
+.about:not(.is-bio) .about__tabs{
+  /* pas de cartouche, look plus “plat” */
+  background:transparent;
+  padding:0;
+  box-shadow:none;
+}
+
+/* =========================
+   Ajustements par écrans
+   ========================= */
+/* Mobile : boutons un tout petit peu plus compacts */
+@media (max-width: 600px){
+  .about .about__tabs button{ font-size:.9rem; padding:.35rem .7rem; }
+}
+
+/* Desktop : look plus discret si tu préfères (optionnel) */
+@media (min-width: 901px){
+  .about:not(.is-bio) .about__tabs button{
+    box-shadow:none;
+    background:rgba(245,222,179,.9);
+    border:0;
+    color:#092a64;
+  }
+  .about:not(.is-bio) .about__tabs button.active{
+    background:rgba(245,222,179,.9);
+    color:#092a64;
+    border-bottom:2px solid #054766; /* petit soulignement actif */
+    border-radius:8px;
+  }
+}
+/* Onglets centrés au-dessus du titre (vue Bio) */
+.about.is-bio .about__tabs{
+  position: static;              /* surtout pas absolute */
   display: flex;
-  gap: var(--gap);
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .6rem;
+
+  width: fit-content;            /* prend la largeur des boutons */
+  max-width: 100%;
+  margin: 0 auto 14px;           /* <-- centre + espace sous la barre */
+  padding: .5rem .75rem;
+
+  background: rgba(232,216,189,.92);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.10);
+}
+
+/* boutons */
+.about.is-bio .about__tabs button{
+  border: 1px solid #d8c9a6;
+  border-radius: 999px;
+  background: #f6efe1;
+  color: #0e4f71;
+  font: 600 .95rem/1 "Open Sans", system-ui, sans-serif;
+  padding: .45rem .9rem;
+  white-space: nowrap;
+  box-shadow: 0 1px 0 rgba(255,255,255,.6), 0 6px 14px rgba(0,0,0,.08);
+}
+.about.is-bio .about__tabs button.active{
+  background:#0e4f71;
+  color:#fff;
+  border-color:#0e4f71;
+}
+
+/* petit ajustement du titre */
+.about.is-bio .about__bio-title{
+  margin-top: .2rem;             /* colle le titre à la barre */
+}
+.about .about__tabs{
+  position: static !important;
+  left: auto !important;
+  transform: none !important;
+}
+/* ===== Bio — TAB BAR (centered, consistent with other pages) ===== */
+.is-bio .about__tabs{
+  position: relative;                 /* no absolute/sticky on Bio */
+  left: 50%;
+  transform: translateX(-50%);        /* true centering */
+  width: min(92vw, 720px);            /* same visual width as others */
+  max-width: 720px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+  flex-wrap: wrap;                    
+
+  margin: 0 auto 14px;                
+  padding: .55rem .8rem;
+
+  background: rgba(232,216,189,.92);  
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.12);
+  z-index: 3;                          
+}
+
+
+@media (max-width: 420px){
+  .is-bio .about__tabs{
+    width: 94vw;                      
+    padding: .5rem .6rem;
+    gap: .5rem;
+  }
+  .is-bio .about__tabs button{
+    font-size: .9rem;
+    padding: .38rem .7rem;
+  }
+}
+/* === BIO: center the tabs bar and prevent clipping === */
+.is-bio .about__tabs{
+  /* kill previous absolute/sticky rules */
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+
+ 
+  display: inline-flex;
+  flex-wrap: wrap;                
+  gap: .6rem;
+
+ 
+  width: fit-content;
+  max-width: 94vw;
+  margin: 0 auto 14px !important; 
+
+ 
+  padding: .55rem .8rem;
+  background: rgba(232,216,189,.92);
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.12);
+  z-index: 3;
+}
+.is-bio .about__tabs button{
+  white-space: nowrap;
+  border: 1px solid #d8c9a6;
+  border-radius: 999px;
+  background: #f6efe1;
+  color: #0e4f71;
+  font-size: .95rem;
+  padding: .45rem .9rem;
+}
+.is-bio .about__tabs button.active{
+  background: #0e4f71;
+  color: #fff;
+  border-color: #0e4f71;
+}
+
+@media (max-width: 420px){
+  .is-bio .about__tabs{
+    max-width: 96vw;              
+    padding: .48rem .6rem;
+    gap: .5rem;
+  }
+  .is-bio .about__tabs button{
+    font-size: .9rem;
+    padding: .38rem .7rem;
+  }
+}
+
+
+.is-bio .about__bio-title{
+  margin: .9rem auto 1.1rem;
+}
+
+.is-bio .about__tabs{
+  position: static;                 
+  display: flex;
+  justify-content: center;          
+  flex-wrap: wrap;                 
+  gap: .5rem;
+  margin: 0 auto 12px;              
+  padding: 0;                     
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Bio — boutons un peu plus petits pour éviter la coupure */
+.is-bio .about__tabs button{
+  font-size: .9rem;                 /* ← tu peux monter/descendre cette valeur */
+  padding: .4rem .7rem;
+}
+
+@media (max-width: 420px){
+  .is-bio .about__tabs button{
+    font-size: .85rem;              /* encore un chouïa plus petit sur mini-téléphones */
+    padding: .35rem .6rem;
+             /* espace en bas si 2e ligne */;
+  }
+}
+
+/* Petit ajustement du titre pour rester rapproché des onglets */
+.is-bio .about__bio-title{ margin: .8rem auto 1rem; }
+.is-bio .about__tabs{
+  position: static !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin: 0 auto 12px;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+
+.is-bio .about__tabs button{
+  font-size: .7rem;
+  padding: .2rem .5rem;
+}
+@media (max-width: 420px){
+  .is-bio .about__tabs button{
+    font-size: .85rem;
+    padding: .35rem .6rem;
+  }
+}
+
+/* Title spacing */
+.is-bio .about__bio-title{ margin: .8rem auto 1rem; }
+/* =========================
+   BIO — réglages responsive fins
+   ========================= */
+
+/* Laptop 1280×800 (paysage) */
+@media (min-width: 1200px) and (max-width: 1366px) and (max-height: 820px) {
+  .is-bio { 
+    /* décale un peu le décor pour libérer le texte */
+    background-position: 30% 30px;    /* joue -60px / -20px si besoin */
+    background-size: contain;
+        background-image: none !important;
+    background-color: #f6efe1;
+  }
+  .is-bio .about__card{
+    top: -24.5vh;                        /* remonte davantage le bloc */
+  }
+  .is-bio .about__tabs{ 
+    margin-top: .20rem;
+  }
+  .is-bio .about__bio-title{
+    margin-top: .35rem;
+  }
+  .about__card--bio{ margin-top: 18vh; }
+}
+
+/* iPad 9/10 en portrait ~ 780×1024 */
+@media (min-width: 760px) and (max-width: 820px) and (min-height: 1000px) and (orientation: portrait){
+  .is-bio{
+    background-size: contain;
+    background-position: 55% 0;
+        background-image: none !important;
+    background-color: #f6efe1;
+  }
+   
+  .is-bio .about__card{ top: -20vh; }
+  .is-bio .about__tabs{ margin: .4rem auto .6rem; }
+  .is-bio .about__bio-title{ margin-top: .4rem; }
+}
+
+/* iPad Pro 11" portrait ~ 834×1194 */
+@media (min-width: 830px) and (max-width: 870px) and (min-height: 1100px) and (orientation: portrait){
+  .is-bio{
+    background-size: contain;
+    background-position: 55% 0;
+    background-image: none !important;
+    background-color: #f6efe1;
+  }
+  .is-bio .about__card{ top: -21vh; }
+  .is-bio .about__tabs{ margin: .5rem auto .75rem; }
+  .is-bio .about__bio-title{ margin-top: .45rem; }
+}
+
+/* Android 8" portrait ~ 800×1280 */
+@media (min-width: 790px) and (max-width: 810px) and (min-height: 1200px) and (orientation: portrait){
+  .is-bio{
+    background-size: contain;
+    background-position: 54% 0;
+  }
+  .is-bio .about__card{ top: -20vh; }
+  .is-bio .about__tabs{ margin: .45rem auto .7rem; }
+  .is-bio .about__bio-title{ margin-top: .45rem; }
+}
+
+/* Petits téléphones (sécurité : onglets bien centrés) */
+@media (max-width: 600px){
+  .is-bio .about__tabs{
+    margin: .35rem auto .6rem;
+    justify-content: center;
+  }
+}
+
+/* Alignement visuel des onglets avec le titre sur tous formats */
+.is-bio .about__tabs{
+  max-width: 640px;      /* même largeur visuelle que la zone titre/texte */
+  align-self: center;    /* centre le groupe d’onglets */
 }
