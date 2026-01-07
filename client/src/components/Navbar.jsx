@@ -37,13 +37,10 @@ export default function Navbar() {
             <a href="/book">Livre</a>
           </li>
           <li>
-            <a href="/buy">Acheter</a>
+            <a href="/critiques">Critiques</a>
           </li>
           <li>
             <a href="/contact">Contact</a>
-          </li>
-          <li>
-            <Link to="/admin">Admin</Link>
           </li>
         </ul>
       </div>

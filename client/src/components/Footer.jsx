@@ -14,8 +14,7 @@ export default function Footer() {
           <Link to="/cgu">CGU</Link>
           <span aria-hidden="true"> · </span>
           <Link to="/mentions-legales">Mentions légales</Link>
-          <span aria-hidden="true"> · </span>
-          <Link to="/donnees-personnelles">Politique de confidentialité</Link>
+         
         </nav>
       </div>
     </footer>

@@ -27,7 +27,12 @@ import photovieuxmiramasgalerie from "../assets/images/photovieuxmiramasgalerie.
 import photovieuxmiramasprovençale from "../assets/images/photovieuxmiramasprovençale.jpg";
 import videoStAndiol from "../assets/videos/StAndiol.mp4";
 import videoVieuxMiramas from "../assets/videos/VieuxMiramas.mp4";
-
+import affichelecastelet from "../assets/images/affichelecastelet.jpg";
+import Journal_le_castelet from "../assets/images/Journal_le_castelet.jpg";
+import Salon_le_castelet from "../assets/images/Salon_le_castelet.jpg";
+import Dédicace_dassault from "../assets/images/Dédicace_dassault.jpg";
+import Dédicace_dassault2 from "../assets/images/Dédicace_dassault2.jpg";
+import Dédicace_dassault3 from "../assets/images/Dédicace_dassault3.jpg";
 export default function About() {
   const [tab, setTab] = useState("bio");
   const [modalImg, setModalImg] = useState(null);
@@ -56,9 +61,21 @@ export default function About() {
     photostandiolAnne,
   ];
 
+   const [casteletAffiche, casteletPhoto] = [
+     affichelecastelet,
+     Salon_le_castelet,
+    
+   ];
+
+   const [dassaultAffiche, dassaultPhoto] = [
+     Dédicace_dassault2,
+     Dédicace_dassault,
+     Dédicace_dassault3,
+   ];
   const articles = [
     { src: articleArnaud, caption: "La Provence, 24 déc. 2024" },
     { src: articleProv, caption: "La Provence, 30 avr. 2025" },
+    { src: Journal_le_castelet, caption: "Le Castelet, 7 déc 2025" },
     { src: dedicaces1, caption: "Les dédicaces" },
     { src: dedicaces2, caption: "Les dédicaces" },
     { src: dedicaces3, caption: "Les dédicaces" },
@@ -117,16 +134,16 @@ export default function About() {
                 <p>
                   Richard Arnaud est né à Marseille d’un père camarguais et
                   d’une mère marseillaise. Très jeune, il baigne dans la langue
-                  provençale familiale et se nourrit des comptines (« Anatole »
-                  à Marseille, « La Rato-penado » à Port-Saint-Louis) qui
-                  résonnent encore dans sa mémoire.
+                  provençale familiale et se nourrit des comptines <br />
+                  (« Anatole » à Marseille, « La Rato-penado » à
+                  Port-Saint-Louis) qui résonnent encore dans sa mémoire.
                 </p>
                 <p>
                   Chaque été, après « prendre le frais » sur la plage Nord du
                   They de Brûle-Tabac, les pas-de-portes se muent en Agora : au
                   coin des cabanons, il découvre récits rocambolesques et faits
                   divers toujours certifiés vrais… même quand ils défient
-                  l’entendement. 
+                  l’entendement.
                 </p>
                 <p>
                   Admirateur de Mistral, Daudet, Pagnol et des félibres, il
@@ -195,6 +212,68 @@ export default function About() {
           {tab === "gallery" && (
             <section className="about__gallery">
               <h2>Affiches & Photos</h2>
+              {/* Bloc St Andiol */}
+              <div className="gallery-block">
+                <img
+                  className="block-main"
+                  src={afficheStAndiol}
+                  alt="Image St Andiol"
+                />
+                <div className="block-subs">
+                  <img
+                    className="block-sub"
+                    src={photoStAndiol}
+                    alt="St Andiol"
+                  />
+                  <img
+                    className="block-sub"
+                    src={photostandiolAnne}
+                    alt="St Andiol Anne"
+                  />
+                  <video
+                    className="block-video"
+                    src={videoStAndiol}
+                    controls
+                    muted
+                    loop
+                  />
+                </div>
+              </div>
+              {/* Bloc Miramas */}
+              <div className="gallery-block">
+                <img
+                  className="block-main"
+                  src={afficheMiramas}
+                  alt="Image Miramas"
+                />
+                <div className="block-subs">
+                  <img
+                    className="block-sub"
+                    src={photoDiscours}
+                    alt="Discours Galerie"
+                  />
+                  <img
+                    className="block-sub"
+                    src={photogaleriemaire}
+                    alt="Discours Maire"
+                  />
+                  <img
+                    className="block-sub"
+                    src={photogaleriemiramas}
+                    alt="galerie"
+                  />
+                  <img
+                    className="block-sub"
+                    src={photogaleriePaulette}
+                    alt="Discours Paulette"
+                  />
+                  <img
+                    className="block-sub"
+                    src={photomiramasvernissage}
+                    alt="Discours vernissage"
+                  />
+                </div>
+              </div>
               {/* Bloc Vieux Miramas */}
               <div className="gallery-block">
                 <img
@@ -237,65 +316,40 @@ export default function About() {
                   />
                 </div>
               </div>
-              {/* Bloc Miramas */}
+             
+
+              {/* Bloc Dassault */}
               <div className="gallery-block">
                 <img
                   className="block-main"
-                  src={afficheMiramas}
-                  alt="Image Miramas"
+                  src={Dédicace_dassault2}
+                  alt="Image Dassault"
                 />
                 <div className="block-subs">
                   <img
                     className="block-sub"
-                    src={photoDiscours}
-                    alt="Discours Galerie"
+                    src={Dédicace_dassault}
+                    alt="Dassault"
                   />
                   <img
                     className="block-sub"
-                    src={photogaleriemaire}
-                    alt="Discours Maire"
-                  />
-                  <img
-                    className="block-sub"
-                    src={photogaleriemiramas}
-                    alt="galerie"
-                  />
-                  <img
-                    className="block-sub"
-                    src={photogaleriePaulette}
-                    alt="Discours Paulette"
-                  />
-                  <img
-                    className="block-sub"
-                    src={photomiramasvernissage}
-                    alt="Discours vernissage"
+                    src={Dédicace_dassault3}
+                    alt="Dassault 3"
                   />
                 </div>
               </div>
-              {/* Bloc St Andiol */}
+              {/* Bloc Le Castelet */}
               <div className="gallery-block">
                 <img
                   className="block-main"
-                  src={afficheStAndiol}
-                  alt="Image St Andiol"
+                  src={affichelecastelet}
+                  alt="Image Le Castelet"
                 />
                 <div className="block-subs">
                   <img
                     className="block-sub"
-                    src={photoStAndiol}
-                    alt="St Andiol"
-                  />
-                  <img
-                    className="block-sub"
-                    src={photostandiolAnne}
-                    alt="St Andiol Anne"
-                  />
-                  <video
-                    className="block-video"
-                    src={videoStAndiol}
-                    controls
-                    muted
-                    loop
+                    src={Salon_le_castelet}
+                    alt="Le Castelet"
                   />
                 </div>
               </div>
