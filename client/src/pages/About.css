@@ -263,9 +263,9 @@
 .about__gallery>h2{ text-align:center; margin:3rem 0; color:var(--color-primary); }
 .about__gallery .gallery-block{ margin-bottom:2rem; }
 .about__gallery .block-main{ width:100%; height:auto; border-radius:8px; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,.1); margin-bottom:1rem; }
-.about__gallery .block-subs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; }
+.about__gallery .block-subs{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
 .about__gallery .block-subs img{
-  width: 100%;
+  width:100%;
   height: 250px;
   object-fit: contain;              /* <- clé : plus de coupe */
   object-position: center;
@@ -797,6 +797,34 @@
     background-position:center top !important;
   }
   .is-bio .about__card{ top:-22vh; }
+}
+/* DEBUG/FIX: forcer la grille à prendre toute la largeur */
+.about__gallery .gallery-block,
+.about__gallery .block-subs{
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Forcer le layout en grille (au cas où une règle l’écrase) */
+.about__gallery .block-subs{
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  align-items: start;
+}
+
+/* Les items doivent pouvoir rétrécir (sinon ça casse la grille) */
+.about__gallery .block-subs > *{
+  min-width: 0;
+}
+
+/* Images/vidéos: ok */
+.about__gallery .block-subs img,
+.about__gallery .block-subs video{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 
