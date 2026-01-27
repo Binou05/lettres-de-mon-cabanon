@@ -35,6 +35,33 @@ export default function Critiques() {
           ))}
         </div>
       </section>
+      <section class="critiques-externe">
+        <p class="critiques-phrase">
+          « Ils ont lu <em>Lettres de mon cabanon</em>… et ils en parlent mieux
+          que nous.
+          <br />
+          Découvrez leurs avis sur le site de l’éditeur. »
+        </p>
+
+        <a
+          class="btn-avis"
+          href="https://www.compagnie-litteraire.com/livre/lettres-de-mon-cabanon-richard-arnaud/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Voir les avis des lecteurs de l'éditeur Compagnie Littéraire
+        </a>
+        <a
+          class="btn-avis"
+           href="https://www.babelio.com/recherche.php?res_recherche=Lettres%20de%20mon%20cabanon%20Histoires%20d%27eaux%20Richard%20Arnaud"
+      
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Voir les avis des lecteurs sur Babelio
+        </a>
+      </section>
+      ;
     </main>
   );
 }

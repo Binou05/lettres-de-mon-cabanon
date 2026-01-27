@@ -47,8 +47,9 @@ export default function Contact() {
               <p className="text-contact">
                 <strong>
                   Contactez-moi pour plonger ensemble dans les vagues de nos
-                  réflexions, naviguant sur les mers d’encre et de sel de ces
-                  récits.
+                  réflexions,<br/> naviguant sur les mers d’encre et de sel de ces
+                  récits. <br/>Si vous êtes intéressé(e) par mon livre, n’hésitez pas à
+                  me le faire savoir !
                 </strong>
               </p>
 
