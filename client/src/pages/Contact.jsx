@@ -46,10 +46,10 @@ export default function Contact() {
 
               <p className="text-contact">
                 <strong>
-                  Contactez-moi pour plonger ensemble dans les vagues de nos
+                  Pour plonger ensemble dans les vagues de nos
                   réflexions,<br/> naviguant sur les mers d’encre et de sel de ces
-                  récits. <br/>Si vous êtes intéressé(e) par mon livre, n’hésitez pas à
-                  me le faire savoir !
+                  récits, et <br/>Si vous êtes intéressé(e) par mon livre, n’hésitez pas à
+                  me contacter !
                 </strong>
               </p>
 

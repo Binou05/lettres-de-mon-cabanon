@@ -177,14 +177,15 @@ export default function About() {
                 toujours certifiés vrais… même quand ils défient l’entendement.
               </p>
               <p>
-                Admirateur de Mistral, Daudet, Pagnol et des félibres, il puise
-                aussi son inspiration auprès de René Bruni, Jean-Claude Rey ou
-                du Grand Yvan Audouard, ami et mentor.
+                Admirateur de Mistral, Daudet, Pagnol... il puise
+                aussi son inspiration auprès de René Bruni, Jean-Claude Rey et surtout
+                du Grand Yvan Audouard, son maître qui au cours de "journées de coeur et d'amitié"
+                lui suggéra d'écrire ses histoires d'eaux.
               </p>
               <p>
-                Pour que ses « histoires d’eaux », mêlant vérité, humour et
-                légende, ne s’évanouissent pas, Richard les couche sur le papier
-                : ses récits invitent à plonger dans les parfums iodés de la
+                Pour que ses « Lettres de mon cabanon », mêlant vérité, humour et
+                légende, ne se perdent dans la nuit des temps, Richard les couche sur le papier
+                sans prétention littéraire mais devoir de mémoire ! Ses récits invitent à plonger dans les parfums iodés de la
                 Méditerranée, la douceur des veillées et l’éternelle quête du
                 merveilleux.
               </p>
@@ -243,7 +244,7 @@ export default function About() {
             <h2>Affiches & Photos</h2>
 
             <h2>
-              Amis depuis plus de 60 ans, et l’histoire continue, écrite par les
+              Amis depuis plus de 60 ans l’histoire continue, écrite par les
               souvenirs, l’amitié sincère et cette étrange magie qui fait que
               certains liens défient le temps qui passe.
             </h2>

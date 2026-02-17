@@ -66,6 +66,16 @@ export const CRITIQUES = [
 
     tags: ["Bonheur", "Emotion"],
   },
+  {
+    id: "crit-007",
+    source: "Avis lecteur",
+    auteur: "Phanieflo",
+    date: "2025-11-10",
+    extrait:
+      "De bien jolies histoires assez rocambolesques dignes de Laurel et Hardy qui se passent dans les Bouches du Rhône, entre Port Saint Louis du Rhône et la Côte Bleue. On suit Richard et Claude dans leurs aventures de pêche et parfois de cueillettes de champignons. Quel plaisir de retrouver les expressions marseillaises et les lieux que je connais si bien. C'est un livre chantant et drôle.",
+
+    tags: ["Bonheur", "Emotion"],
+  },
 ];
 
 

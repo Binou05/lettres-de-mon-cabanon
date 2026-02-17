@@ -51,15 +51,7 @@ export default function Critiques() {
         >
           Voir les avis des lecteurs de l'éditeur Compagnie Littéraire
         </a>
-        <a
-          class="btn-avis"
-           href="https://www.babelio.com/recherche.php?res_recherche=Lettres%20de%20mon%20cabanon%20Histoires%20d%27eaux%20Richard%20Arnaud"
-      
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Voir les avis des lecteurs sur Babelio
-        </a>
+       
       </section>
       ;
     </main>
