@@ -1,0 +1,177 @@
+/* ================================
+   ENCRE DE SEL — CRITIQUES
+   Style "papier" comme tes captures
+================================ */
+
+/* Fond global de page (beige) */
+.critiques-page {
+  min-height: calc(100vh - 80px); /* adapte si ton header fait ~80px */
+  background: #f6eed9;           /* beige papier */
+  padding: 60px 16px 90px;
+}
+
+/* Grand panneau central légèrement translucide */
+.critiques-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 44px 52px;
+  border-radius: 18px;
+
+  /* panneau clair style “papier sous verre” */
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+
+  /* petit côté “texture douce” */
+  backdrop-filter: blur(3px);
+}
+
+/* Titre bleu pétrole comme tes pages */
+.critiques-title {
+  margin: 0;
+  text-align: center;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 40px;
+  letter-spacing: 0.5px;
+  color: #0b4f68;; /* bleu pétrole */
+}
+
+/* Sous-titre sobre */
+.critiques-subtitle {
+  margin: 14px auto 30px;
+  text-align: center;
+  max-width: 680px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* Grille de critiques */
+.critiques-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* Carte “crème” comme tes blocs */
+.critique-card {
+  border-radius: 16px;
+  padding: 18px 18px 16px;
+  background: rgba(250, 245, 232, 0.85); /* crème */
+  border: 1px solid rgba(11, 79, 104, 0.18); /* rappel du bleu */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.critique-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.12);
+}
+
+/* Source */
+.critique-source {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b4f68; /* bleu pétrole */
+}
+
+/* Auteur + date */
+.critique-meta {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.62);
+}
+
+.critique-author {
+  font-weight: 600;
+}
+
+.critique-date {
+  margin-left: 6px;
+}
+
+/* Citation */
+.critique-quote {
+  margin: 14px 0 12px;
+  padding-left: 14px;
+  border-left: 4px solid rgba(11, 79, 104, 0.35);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.80);
+}
+
+/* Tags en pastilles */
+.critique-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.critique-tag {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  background: #f2e2b8; /* beige doré comme tes onglets */
+  border: 1px solid rgba(11, 79, 104, 0.22);
+  color: #0b4f68;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .critiques-shell {
+    padding: 34px 20px;
+  }
+
+  .critiques-title {
+    font-size: 32px;
+  }
+}
+.critiques-externe{
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+}
+
+.critiques-phrase{
+  margin: 0 0 1rem 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.btn-avis{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .85rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+
+.btn-avis:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+  opacity: 0.95;
+}
+
+.btn-avis:active{
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+.btn-avis:focus-visible{
+  outline: 3px solid rgba(255,255,255,0.35);
+  outline-offset: 4px;
+}

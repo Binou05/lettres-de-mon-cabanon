@@ -52,7 +52,7 @@ export default function Mentions() {
               Adresse : <strong>[Adresse postale]</strong>
               <br />
               Email :{" "}
-              <a href="mailto:[email]">
+              <a href="mailto:arnaudrichard1947@gmail.com">
                 <strong>[email]</strong>
               </a>{" "}
               · Tél. : <strong>[téléphone]</strong>
@@ -60,11 +60,6 @@ export default function Mentions() {
               Statut juridique :{" "}
               <strong>[micro-entreprise / association / etc.]</strong>
               <br />
-              SIREN/SIRET : <strong>[numéro, si applicable]</strong>
-              <br />
-              TVA intracommunautaire : <strong>[n° si applicable]</strong>
-              <br />
-              Directeur de la publication : <strong>[Nom complet]</strong>
             </p>
           </section>
 
@@ -119,7 +114,6 @@ export default function Mentions() {
               <a href="/donnees-personnelles">
                 Politique de protection des données
               </a>
-              .
             </p>
           </section>
 
@@ -135,7 +129,7 @@ export default function Mentions() {
 
           <footer className="legal__footer">
             Éditeur : Encre de sel — Richard Arnaud · Contact :{" "}
-            <a href="mailto:[email]">[email]</a>
+            <a href="mailto:[arnaudrichard1947@gmail.com]">[email]</a>
           </footer>
         </article>
       </main>

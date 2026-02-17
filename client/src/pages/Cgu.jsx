@@ -95,12 +95,11 @@ export default function Cgu() {
               Adresse : <strong>[Adresse postale]</strong>
               <br />
               Email :{" "}
-              <a href="mailto:[email]">
+              <a href="mailto:[arnaudrichard1947@gmail.com]">
                 <strong>[email]</strong>
               </a>{" "}
               · Tél. : <strong>[téléphone]</strong>
               <br />
-              SIREN/SIRET : <strong>[numéro, si applicable]</strong>
             </p>
           </section>
 
@@ -136,45 +135,6 @@ export default function Cgu() {
               éventuellement ajoutés au panier. L’éditeur se réserve le droit de
               modifier les prix à tout moment ; le prix appliqué est celui en
               vigueur lors de la commande.
-            </p>
-          </section>
-
-          <section id="paiement">
-            <h2>7. Paiement</h2>
-            <p>
-              Paiement sécurisé par <strong>Stripe</strong> (carte bancaire).
-              L’éditeur n’a jamais accès aux données de carte. La commande n’est
-              validée qu’après confirmation du paiement.
-            </p>
-          </section>
-
-          <section id="livraison">
-            <h2>8. Livraison</h2>
-            <p>
-              Expédition sous <strong>[X]</strong> jours ouvrés vers{" "}
-              <strong>[pays desservis]</strong>. Délais indicatifs postaux : 2–6
-              jours ouvrés en France métropolitaine. Frais de port affichés
-              avant paiement.
-            </p>
-          </section>
-
-          <section id="retractation">
-            <h2>9. Droit de rétractation</h2>
-            <p>
-              Conformément aux articles L221-18 et s. du Code de la
-              consommation, vous disposez d’un délai de{" "}
-              <strong>14 jours</strong> à compter de la réception pour exercer
-              votre droit de rétractation sans motif, en écrivant à{" "}
-              <strong>[email]</strong>. Le livre doit être retourné neuf et non
-              utilisé. Les frais de retour sont à votre charge ; remboursement
-              sous 14 jours après réception.
-            </p>
-            <p>
-              <em>
-                Exception : les contenus numériques fournis sur support
-                immatériel éventuellement vendus (e-book, PDF) ne sont pas
-                remboursables après téléchargement (art. L221-28).
-              </em>
             </p>
           </section>
 
@@ -242,7 +202,7 @@ export default function Cgu() {
 
           <footer className="legal__footer">
             Éditeur : Encre de sel — Richard Arnaud · Contact :{" "}
-            <a href="mailto:[email]">[email]</a>
+            <a href="mailto:[arnaudrichard1947@gmail.com]">[email]</a>
           </footer>
         </article>
       </main>
