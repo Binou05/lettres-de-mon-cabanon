@@ -1,6 +1,6 @@
 // src/App.js
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Cgu from "./pages/Cgu";
@@ -13,10 +13,6 @@ import Critiques from "./pages/Critiques";
 import Contact from "./pages/Contact";
 
 
-function RequireAdmin({ children }) {
-  const key = localStorage.getItem("cabanon-admin-key") || "";
-  return key ? children : <Navigate to="/admin" replace />;
-}
 
 function App() {
   return (
