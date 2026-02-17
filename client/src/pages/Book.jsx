@@ -16,9 +16,6 @@ export default function Book() {
   
   return (
     <>
-     
-   
-
       {/* 1) Hero full-bleed pour le background dégradé */}
       <div className="book-hero" />
 
@@ -50,7 +47,7 @@ export default function Book() {
           </div>
 
           <section className="book-about">
-            <h1 className="titre-apropos">À propos</h1>
+            
             <div className="separator" />
 
             <div className="about-intro">
@@ -64,12 +61,10 @@ export default function Book() {
                 <br />« Histoires d’eaux »
               </p>
             </div>
-
+            <p className="intro">
+              Des récits aux parfums de vérité des contes du Midi </p>
+            <br />
             <div className="about-text">
-              <p>
-                Des histoires de pêche aux parfums savoureux de contes de
-                Provence…
-              </p>
               <p>
                 Des histoires de pêche aux parfums savoureux de contes de
                 Provence où la scoumougne s’acharne, accrochée aux basques de
@@ -88,7 +83,7 @@ export default function Book() {
               </p>
               <p>
                 C’est depuis mon petit Cabanon familial ancré sur le They de
-                Brûle-Tabac à Port-Saint-Louis-du-Rhône, que, pour éviter que
+                Brûle-Tabac à Port-Saint-Louis-du-Rhône, pour éviter que
                 toutes ces histoires authentiques ne se perdent dans la nuit des
                 temps, je les ai couchées sur le papier sans prétention
                 littéraire par devoir de mémoire.
@@ -103,8 +98,6 @@ export default function Book() {
           </section>
         </div>
       </main>
-
-    
 
       {open && (
         <BookCarousel startIndex={startIndex} onClose={() => setOpen(false)} />

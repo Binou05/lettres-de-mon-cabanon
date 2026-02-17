@@ -121,7 +121,16 @@
     margin: 0;
     white-space: nowrap;       /* une ligne sans retour auto */
   }
-  
+  .intro {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;           /* plus grand */
+    font-weight: 700;          /* semi-bold */
+    line-height: 1.2;          /* serré pour un titre */
+    color: #2f6b94;            /* même bleu que le titre principal */
+    margin: 0;
+    white-space: nowrap; 
+          /* une ligne sans retour auto */
+  }
   /* === Le reste du texte === */
   .about-text p {
     margin-bottom: 1.5rem;

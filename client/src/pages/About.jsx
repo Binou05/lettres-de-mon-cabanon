@@ -171,7 +171,7 @@ export default function About() {
                 qui résonnent encore dans sa mémoire.
               </p>
               <p>
-                Chaque été, après « prendre le frais » sur la plage Nord du They
+                C'est lors de veillées l'été il allait « prendre le frais » sur la plage Nord du They
                 de Brûle-Tabac, les pas-de-portes se muent en Agora : au coin
                 des cabanons, il découvre récits rocambolesques et faits divers
                 toujours certifiés vrais… même quand ils défient l’entendement.
