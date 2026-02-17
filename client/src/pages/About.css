@@ -826,7 +826,27 @@
   object-fit: cover;
   border-radius: 8px;
 }
+/* ✅ Mobile: on évite la coupe, on garde l'image entière */
+@media (max-width: 768px) {
+  .about__gallery .block-subs img,
+  .about__gallery .block-subs video {
+    height: auto;              /* plus de hauteur fixe */
+    max-height: 60vh;          /* limite pour éviter un énorme pavé */
+    object-fit: contain;       /* affiche entier (pas coupé) */
+    background: rgba(0,0,0,0.06); /* joli fond si bandes */
+    padding: 6px;              /* petit breathing */
+    border-radius: 10px;
+  }
+}
 
+/* 📱 Très petit écran: un peu plus strict */
+@media (max-width: 480px) {
+  .about__gallery .block-subs img,
+  .about__gallery .block-subs video {
+    max-height: 55vh;
+    padding: 4px;
+  }
+}
 
 
 
