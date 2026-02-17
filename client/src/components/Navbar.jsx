@@ -12,8 +12,10 @@ export default function Navbar() {
       <div className="navbar__inner">
         {/* marque (logo + titre) */}
         <div className="navbar__brand">
-          <img src={logo} alt="Encre de sel logo" className="navbar__logo" />
-          <span className="navbar__title">Encre de sel</span>
+          <Link to="/" className="navbar__brand-link">
+            <img src={logo} alt="Encre de sel logo" className="navbar__logo" />
+            <span className="navbar__title">Encre de sel</span>
+          </Link>
         </div>
 
         <button
@@ -28,19 +30,19 @@ export default function Navbar() {
 
         <ul className={`navbar__links ${open ? "open" : ""}`}>
           <li>
-            <a href="/">Accueil</a>
+            <Link to="/">Accueil</Link>
           </li>
           <li>
-            <a href="/about">À propos</a>
+            <Link to="/about">À propos</Link>
           </li>
           <li>
-            <a href="/book">Livre</a>
+            <Link to="/book">Livre</Link>
           </li>
           <li>
-            <a href="/critiques">Critiques</a>
+            <Link to="/critiques">Critiques</Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>
