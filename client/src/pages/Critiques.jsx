@@ -40,17 +40,10 @@ export default function Critiques() {
           « Ils ont lu <em>Lettres de mon cabanon</em>… et ils en parlent mieux
           que nous.
           <br />
-          Découvrez leurs avis sur le site de l’éditeur. »
+          Découvrez leurs avis sur le site de l’éditeur "La Compagnie Littéraire Paris"  
         </p>
 
-        <a
-          class="btn-avis"
-          href="https://www.compagnie-litteraire.com/livre/lettres-de-mon-cabanon-richard-arnaud/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Voir les avis des lecteurs de l'éditeur Compagnie Littéraire
-        </a>
+       
        
       </section>
       ;
