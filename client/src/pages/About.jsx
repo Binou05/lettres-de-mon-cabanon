@@ -374,6 +374,7 @@ export default function About() {
                   className="block-sub block-sub--contain"
                   src={photoDedicasse}
                   alt="Vieux Miramas dédicaces"
+                  onClick={() => setZoomImage(photoDedicasse)}
                 />
                 <img
                   className="block-sub"
@@ -385,6 +386,7 @@ export default function About() {
                   className="block-sub"
                   src={photovieuxmiramasgalerie}
                   alt="Vieux Miramas galerie"
+                  onClick={() => setZoomImage(photovieuxmiramasgalerie)}
                 />
                 <img
                   className="block-sub"
@@ -414,6 +416,7 @@ export default function About() {
                   className="block-sub block-sub--contain"
                   src={photofontvieille}
                   alt="Fontvieille"
+                  onClick={() => setZoomImage(photofontvieille)}
                 />
                 <img
                   className="block-sub block-sub--contain"
@@ -717,6 +720,7 @@ export default function About() {
                   className="block-sub"
                   src={photoexpomiramas}
                   alt="Miramas"
+                  onClick={() => setZoomImage(photoexpomiramas)}
                 />
                 <img
                   className="block-sub"
