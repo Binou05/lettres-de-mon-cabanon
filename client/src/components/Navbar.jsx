@@ -1,11 +1,17 @@
 // src/components/Navbar.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const closeMenu = () => setOpen(false);
+useEffect(() => {
+  const handleScroll = () => setOpen(false);
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   return (
     <nav className="navbar">
@@ -30,19 +36,29 @@ export default function Navbar() {
 
         <ul className={`navbar__links ${open ? "open" : ""}`}>
           <li>
-            <Link to="/">Accueil</Link>
+            <Link to="/" onClick={closeMenu}>
+              Accueil
+            </Link>
           </li>
           <li>
-            <Link to="/about">À propos</Link>
+            <Link to="/about" onClick={closeMenu}>
+              À propos
+            </Link>
           </li>
           <li>
-            <Link to="/book">Livre</Link>
+            <Link to="/book" onClick={closeMenu}>
+              Livre
+            </Link>
           </li>
           <li>
-            <Link to="/critiques">Critiques</Link>
+            <Link to="/critiques" onClick={closeMenu}>
+              Critiques
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" onClick={closeMenu}>
+              Contact
+            </Link>
           </li>
         </ul>
       </div>

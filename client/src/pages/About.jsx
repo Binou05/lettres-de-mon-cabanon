@@ -1,6 +1,6 @@
 // src/pages/About.jsx
 import React, { useState } from "react";
-
+import Lightbox from "../components/Lightbox";
 import "./About.css";
 import background from "../assets/images/background-bio.png";
 import photoRichard from "../assets/images/Image-papa.jpg";
@@ -103,6 +103,7 @@ export default function About() {
   const [tab, setTab] = useState("bio");
   const [modalImg, setModalImg] = useState(null);
   const [scale, setScale] = useState(1);
+  const [zoomImage, setZoomImage] = useState(null);
 
   const articles = [
     { src: articleArnaud, caption: "La Provence, 24 déc. 2024" },
@@ -171,23 +172,25 @@ export default function About() {
                 qui résonnent encore dans sa mémoire.
               </p>
               <p>
-                C'est lors de veillées l'été il allait « prendre le frais » sur la plage Nord du They
-                de Brûle-Tabac, les pas-de-portes se muent en Agora : au coin
-                des cabanons, il découvre récits rocambolesques et faits divers
-                toujours certifiés vrais… même quand ils défient l’entendement.
+                C'est lors de veillées l'été il allait « prendre le frais » sur
+                la plage Nord du They de Brûle-Tabac, les pas-de-portes se muent
+                en Agora : au coin des cabanons, il découvre récits
+                rocambolesques et faits divers toujours certifiés vrais… même
+                quand ils défient l’entendement.
               </p>
               <p>
-                Admirateur de Mistral, Daudet, Pagnol... il puise
-                aussi son inspiration auprès de René Bruni, Jean-Claude Rey et surtout
-                du Grand Yvan Audouard, son maître qui au cours de "journées de coeur et d'amitié"
-                lui suggéra d'écrire ses histoires d'eaux.
+                Admirateur de Mistral, Daudet, Pagnol... il puise aussi son
+                inspiration auprès de René Bruni, Jean-Claude Rey et surtout du
+                Grand Yvan Audouard, son maître qui au cours de "journées de
+                coeur et d'amitié" lui suggéra d'écrire ses histoires d'eaux.
               </p>
               <p>
-                Pour que ses « Lettres de mon cabanon », mêlant vérité, humour et
-                légende, ne se perdent dans la nuit des temps, Richard les couche sur le papier
-                sans prétention littéraire mais devoir de mémoire ! Ses récits invitent à plonger dans les parfums iodés de la
-                Méditerranée, la douceur des veillées et l’éternelle quête du
-                merveilleux.
+                Pour que ses « Lettres de mon cabanon », mêlant vérité, humour
+                et légende, ne se perdent dans la nuit des temps, Richard les
+                couche sur le papier sans prétention littéraire mais devoir de
+                mémoire ! Ses récits invitent à plonger dans les parfums iodés
+                de la Méditerranée, la douceur des veillées et l’éternelle quête
+                du merveilleux.
               </p>
             </div>
 
@@ -251,16 +254,24 @@ export default function About() {
             {/* Bloc les amis*/}
 
             <div className="block-subs">
-              <img className="block-sub" src={lesamis} alt="les amis" />
+              <img
+                className="block-sub"
+                src={lesamis}
+                alt="les amis"
+                onClick={() => setZoomImage(lesamis)}
+              />
+
               <img
                 className="block-sub"
                 src={photoauteuretclaude}
                 alt="Auteur et Claude"
+                onClick={() => setZoomImage(photoauteuretclaude)}
               />
               <img
                 className="block-sub"
                 src={lesamis2}
                 alt="Auteur et Claude"
+                onClick={() => setZoomImage(lesamis2)}
               />
             </div>
             <br />
@@ -271,17 +282,20 @@ export default function About() {
                 className="block-main"
                 src={afficheStAndiol}
                 alt="Salon St Andiol"
+                onClick={() => setZoomImage(afficheStAndiol)}
               />
               <div className="block-subs">
                 <img
                   className="block-sub"
                   src={photoStAndiol}
                   alt="St Andiol"
+                  onClick={() => setZoomImage(photoStAndiol)}
                 />
                 <img
                   className="block-sub"
                   src={photostandiolAnne}
                   alt="St Andiol Anne"
+                  onClick={() => setZoomImage(photostandiolAnne)}
                 />
                 <video
                   className="block-video"
@@ -299,37 +313,44 @@ export default function About() {
                 className="block-main"
                 src={afficheMiramas}
                 alt="Exposition à Miramas"
+                onClick={() => setZoomImage(afficheMiramas)}
               />
               <div className="block-subs">
                 <img
                   className="block-sub"
                   src={photoDiscours}
                   alt="Discours Galerie"
+                  onClick={() => setZoomImage(photoDiscours)}
                 />
                 <img
                   className="block-sub"
                   src={photogaleriemaire}
                   alt="Discours Maire"
+                  onClick={() => setZoomImage(photogaleriemaire)}
                 />
                 <img
                   className="block-sub"
                   src={photogaleriemiramas}
                   alt="Galerie"
+                  onClick={() => setZoomImage(photogaleriemiramas)}
                 />
                 <img
                   className="block-sub"
                   src={photogaleriePaulette}
                   alt="Discours Paulette"
+                  onClick={() => setZoomImage(photogaleriePaulette)}
                 />
                 <img
                   className="block-sub"
                   src={photomiramasvernissage}
                   alt="Discours vernissage"
+                  onClick={() => setZoomImage(photomiramasvernissage)}
                 />
                 <img
                   className="block-sub"
                   src={miramasexpo3mai}
                   alt="Discours vernissage"
+                  onClick={() => setZoomImage(miramasexpo3mai)}
                 />
               </div>
             </div>
@@ -340,12 +361,14 @@ export default function About() {
                 className="block-main"
                 src={afficheVieuxMiramas}
                 alt="Salon Vieux Miramas"
+                onClick={() => setZoomImage(afficheVieuxMiramas)}
               />
               <div className="block-subs">
                 <img
                   className="block-sub"
                   src={photoVieux}
                   alt="Vieux Miramas"
+                  onClick={() => setZoomImage(photoVieux)}
                 />
                 <img
                   className="block-sub block-sub--contain"
@@ -356,6 +379,7 @@ export default function About() {
                   className="block-sub"
                   src={photovieuxmiramasécrivain}
                   alt="Vieux Miramas auteur"
+                  onClick={() => setZoomImage(photovieuxmiramasécrivain)}
                 />
                 <img
                   className="block-sub"
@@ -366,6 +390,7 @@ export default function About() {
                   className="block-sub"
                   src={photovieuxmiramasprovençale}
                   alt="Vieux Miramas provençale"
+                  onClick={() => setZoomImage(photovieuxmiramasprovençale)}
                 />
                 <video
                   className="block-video"
@@ -382,6 +407,7 @@ export default function About() {
                 className="block-main"
                 src={afficheFontvieille}
                 alt="Dédicace Fontvieille"
+                onClick={() => setZoomImage(afficheFontvieille)}
               />
               <div className="block-subs">
                 <img
@@ -393,6 +419,7 @@ export default function About() {
                   className="block-sub block-sub--contain"
                   src={photofontvieille2}
                   alt="Fontvieille 2"
+                  onClick={() => setZoomImage(photofontvieille2)}
                 />
               </div>
             </div>
@@ -403,22 +430,26 @@ export default function About() {
                 className="block-main"
                 src={Affichecamargue}
                 alt="Dédicace Camargue"
+                onClick={() => setZoomImage(Affichecamargue)}
               />
               <div className="block-subs">
                 <img
                   className="block-sub block-sub--contain"
                   src={photoportStlouis}
                   alt="Port St Louis"
+                  onClick={() => setZoomImage(photoportStlouis)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photoportStlouis2}
                   alt="Port St Louis 2"
+                  onClick={() => setZoomImage(photoportStlouis2)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photoportStlouis3}
                   alt="Port St Louis 3"
+                  onClick={() => setZoomImage(photoportStlouis3)}
                 />
               </div>
             </div>
@@ -428,22 +459,26 @@ export default function About() {
                 className="block-main"
                 src={Dédicace_dassault2}
                 alt="Dédicace Dassault"
+                onClick={() => setZoomImage(Dédicace_dassault2)}
               />
               <div className="block-subs">
                 <img
                   className="block-sub block-sub--contain"
                   src={PrésentationDassault}
                   alt="Dassault"
+                  onClick={() => setZoomImage(PrésentationDassault)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={PhotoDassault}
                   alt="Dassault"
+                  onClick={() => setZoomImage(PhotoDassault)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={PhotoDassault2}
                   alt="Dassault"
+                  onClick={() => setZoomImage(PhotoDassault2)}
                 />
               </div>
             </div>
@@ -453,22 +488,26 @@ export default function About() {
                 className="block-main"
                 src={Affichelamartre}
                 alt="Dédicace Lamartre"
+                onClick={() => setZoomImage(Affichelamartre)}
               />
               <div className="block-subs">
                 <img
                   className="block-sub block-sub--contain"
                   src={photoLamartre}
                   alt="Lamartre"
+                  onClick={() => setZoomImage(photoLamartre)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photoLamartre2}
                   alt="Lamartre 2"
+                  onClick={() => setZoomImage(photoLamartre2)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photoLamartre3}
                   alt="Lamartre 3"
+                  onClick={() => setZoomImage(photoLamartre3)}
                 />
               </div>
             </div>
@@ -478,22 +517,26 @@ export default function About() {
                 className="block-main"
                 src={AfficheSault}
                 alt="Dédicace Sault"
+                onClick={() => setZoomImage(AfficheSault)}
               />
               <div className="block-subs">
                 <img
                   className="block-sub block-sub--contain"
                   src={photoSault}
                   alt="Sault"
+                  onClick={() => setZoomImage(photoSault)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photoSault2}
                   alt="Sault 2"
+                  onClick={() => setZoomImage(photoSault2)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photoSault3}
                   alt="Sault 3"
+                  onClick={() => setZoomImage(photoSault3)}
                 />
               </div>
             </div>
@@ -503,37 +546,44 @@ export default function About() {
                 className="block-main"
                 src={AfficheLardier}
                 alt="Dédicace Lardier"
+                onClick={() => setZoomImage(AfficheLardier)}
               />
               <div className="block-subs">
                 <img
                   className="block-sub block-sub--contain"
                   src={photolardier}
                   alt="Lardier"
+                  onClick={() => setZoomImage(photolardier)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photolardier2}
                   alt="Lardier 2"
+                  onClick={() => setZoomImage(photolardier2)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photolardier3}
                   alt="Lardier 3"
+                  onClick={() => setZoomImage(photolardier3)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photolardier4}
                   alt="Lardier 4"
+                  onClick={() => setZoomImage(photolardier4)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photolardier5}
                   alt="Lardier 5"
+                  onClick={() => setZoomImage(photolardier5)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photolardier6}
                   alt="Lardier 6"
+                  onClick={() => setZoomImage(photolardier6)}
                 />
               </div>
             </div>
@@ -543,22 +593,26 @@ export default function About() {
                 className="block-main"
                 src={affichestvictoret}
                 alt="Dédicace St Victoret"
+                onClick={() => setZoomImage(affichestvictoret)}
               />
               <div className="block-subs">
                 <img
                   className="block-sub block-sub--contain"
                   src={photostvictoret}
                   alt="St Victoret"
+                  onClick={() => setZoomImage(photostvictoret)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photostvictoret2}
                   alt="St Victoret 2"
+                  onClick={() => setZoomImage(photostvictoret2)}
                 />
                 <img
                   className="block-sub block-sub--contain"
                   src={photostvictoret3}
                   alt="St Victoret 3"
+                  onClick={() => setZoomImage(photostvictoret3)}
                 />
               </div>
             </div>
@@ -568,26 +622,45 @@ export default function About() {
                 className="block-main"
                 src={AfficheBalaruc}
                 alt="Exposition Balaruc"
+                onClick={() => setZoomImage(AfficheBalaruc)}
               />
               <div className="block-subs">
                 <img
                   className="block-sub"
                   src={dédicaceBallaruc}
                   alt="Balaruc"
+                  onClick={() => setZoomImage(dédicaceBallaruc)}
                 />
                 <img
                   className="block-sub"
                   src={Dédicace_dassault3}
                   alt="Balaruc"
+                  onClick={() => setZoomImage(Dédicace_dassault3)}
                 />
                 <img
                   className="block-sub"
                   src={Dédicace_dassault}
                   alt="Balaruc"
+                  onClick={() => setZoomImage(Dédicace_dassault)}
                 />
-                <img className="block-sub" src={photobalaruc} alt="Balaruc" />
-                <img className="block-sub" src={photobalaruc2} alt="Balaruc" />
-                <img className="block-sub" src={photobalaruc3} alt="Balaruc" />
+                <img
+                  className="block-sub"
+                  src={photobalaruc}
+                  alt="Balaruc"
+                  onClick={() => setZoomImage(photobalaruc)}
+                />
+                <img
+                  className="block-sub"
+                  src={photobalaruc2}
+                  alt="Balaruc"
+                  onClick={() => setZoomImage(photobalaruc2)}
+                />
+                <img
+                  className="block-sub"
+                  src={photobalaruc3}
+                  alt="Balaruc"
+                  onClick={() => setZoomImage(photobalaruc3)}
+                />
               </div>
             </div>
             {/* Bloc Le Castelet */}
@@ -596,22 +669,26 @@ export default function About() {
                 className="block-main"
                 src={affichelecastelet}
                 alt="Exposition Le Castelet"
+                onClick={() => setZoomImage(affichelecastelet)}
               />
               <div className="block-subs">
                 <img
                   className="block-sub"
                   src={photolecastelet}
                   alt="Le Castelet"
+                  onClick={() => setZoomImage(photolecastelet)}
                 />
                 <img
                   className="block-sub"
                   src={Salon_le_castelet}
                   alt="Le Castelet"
+                  onClick={() => setZoomImage(Salon_le_castelet)}
                 />
                 <img
                   className="block-sub"
                   src={photoLecastelet3}
                   alt="Le Castelet"
+                  onClick={() => setZoomImage(photoLecastelet3)}
                 />
               </div>
             </div>
@@ -621,30 +698,49 @@ export default function About() {
                 className="block-main"
                 src={Expomiramas3}
                 alt="Exposition Miramas"
+                onClick={() => setZoomImage(Expomiramas3)}
               />
               <div className="block-subs">
                 <img
                   className="block-sub"
                   src={Expomiramasdéc25}
                   alt="Miramas"
+                  onClick={() => setZoomImage(Expomiramasdéc25)}
                 />
-                <img className="block-sub" src={Expomiramas2} alt="Miramas" />
+                <img
+                  className="block-sub"
+                  src={Expomiramas2}
+                  alt="Miramas"
+                  onClick={() => setZoomImage(Expomiramas2)}
+                />
                 <img
                   className="block-sub"
                   src={photoexpomiramas}
                   alt="Miramas"
                 />
-                <img className="block-sub" src={Expomiramas4} alt="Miramas" />
-                <img className="block-sub" src={Expomiramas5} alt="Miramas" />
+                <img
+                  className="block-sub"
+                  src={Expomiramas4}
+                  alt="Miramas"
+                  onClick={() => setZoomImage(Expomiramas4)}
+                />
+                <img
+                  className="block-sub"
+                  src={Expomiramas5}
+                  alt="Miramas"
+                  onClick={() => setZoomImage(Expomiramas5)}
+                />
                 <img
                   className="block-sub"
                   src={photoexpomiramasbis}
                   alt="Miramas"
+                  onClick={() => setZoomImage(photoexpomiramasbis)}
                 />
               </div>
             </div>
           </section>
         )}
+        <Lightbox src={zoomImage} onClose={() => setZoomImage(null)} />
       </div>
     </main>
   );
