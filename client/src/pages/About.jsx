@@ -61,6 +61,9 @@ import photolardier6 from "../assets/images/photolardier6.jpg";
 import photoportStlouis from "../assets/images/photoportStlouis.jpg";
 import photoportStlouis2 from "../assets/images/photoportStlouis2.jpg";
 import photoportStlouis3 from "../assets/images/photoportStlouis3.jpg";
+import photoCamarguesPLS from "../assets/images/photoCamarguesPSL.jpg";
+import photoCamarguesPLS2 from "../assets/images/photoCamarguesPSL2.jpg";
+import photoCamarguesPLS3 from "../assets/images/photoCamarguesPSL3.jpg";
 
 import photoSault from "../assets/images/photoSault.jpg";
 import photoSault2 from "../assets/images/photoSault2.jpg";
@@ -186,9 +189,9 @@ export default function About() {
               <p>
                 Pour que ses « Lettres de mon cabanon », mêlant vérité, humour
                 et légende, ne se perdent dans la nuit des temps, Richard les
-                couche sur le papier sans prétention littéraire mais par devoir de
-                mémoire ! Ses récits invitent à plonger dans les parfums iodés
-                de la Méditerranée, la douceur des veillées...
+                couche sur le papier sans prétention littéraire mais par devoir
+                de mémoire ! Ses récits invitent à plonger dans les parfums
+                iodés de la Méditerranée, la douceur des veillées...
               </p>
               <p>
                 Une éternelle et affectueuse Amitié lit l'auteur avec Claude le
@@ -198,8 +201,6 @@ export default function About() {
                 de naître ! "
               </p>
             </div>
-
-         
           </section>
         )}
 
@@ -455,6 +456,24 @@ export default function About() {
                   src={photoportStlouis3}
                   alt="Port St Louis 3"
                   onClick={() => setZoomImage(photoportStlouis3)}
+                />
+                <img
+                  className="block-sub block-sub--contain"
+                  src={photoCamarguesPLS}
+                  alt="Camargues PSL"
+                  onClick={() => setZoomImage(photoCamarguesPLS)}
+                />
+                <img
+                  className="block-sub block-sub--contain"
+                  src={photoCamarguesPLS2}
+                  alt="Camargues PSL 2"
+                  onClick={() => setZoomImage(photoCamarguesPLS2)}
+                />
+                <img
+                  className="block-sub block-sub--contain"
+                  src={photoCamarguesPLS3}
+                  alt="Camargues PSL 3"
+                  onClick={() => setZoomImage(photoCamarguesPLS3)}
                 />
               </div>
             </div>
