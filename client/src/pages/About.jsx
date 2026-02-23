@@ -4,7 +4,7 @@ import Lightbox from "../components/Lightbox";
 import "./About.css";
 import background from "../assets/images/background-bio.png";
 import photoRichard from "../assets/images/Image-papa.jpg";
-import photoRichardEcrivain from "../assets/images/photo-richard-ecrivain.jpg";
+
 
 import articleArnaud from "../assets/images/article-24-12-26-richard-arnaud.png";
 import articleProv from "../assets/images/article-la-provence.jpg";
@@ -167,37 +167,39 @@ export default function About() {
               <p>
                 Richard Arnaud est né à Marseille d’un père camarguais et d’une
                 mère marseillaise. Très jeune, il baigne dans la langue
-                provençale familiale et se nourrit des comptines <br />
-                (« Anatole » à Marseille, « La Rato-penado » à Port-Saint-Louis)
-                qui résonnent encore dans sa mémoire.
+                provençale et le parler marseillais de ses grands-parents <br />
               </p>
               <p>
-                C'est lors de veillées l'été il allait « prendre le frais » sur
-                la plage Nord du They de Brûle-Tabac, les pas-de-portes se muent
-                en Agora : au coin des cabanons, il découvre récits
-                rocambolesques et faits divers toujours certifiés vrais… même
-                quand ils défient l’entendement.
+                Chaque été pendant toute son adolescence, lors des vacances
+                scolaires, sur les pas-de-portes à Marseille, sur la plage
+                devant les cabanons à Port Saint Louis du Rhône, lieux se
+                transformant en véritable agoras, il va s'imprégner de l'art
+                oral de l'histoire drôle, du fait divers rocambolesque, du conte
+                incroyable, tous certifiés vrais par les rapporteurs d'un soir
+                même quand ils défient l'entendement !
               </p>
               <p>
-                Admirateur de Mistral, Daudet, Pagnol... il puise aussi son
-                inspiration auprès de René Bruni, Jean-Claude Rey et surtout du
-                Grand Yvan Audouard, son maître qui au cours de "journées de
-                coeur et d'amitié" lui suggéra d'écrire ses histoires d'eaux.
+                Admirateur des auteurs de culture provençale et méridionale, à
+                qui il rend hommage dans son "A propos de l'auteur" du livre, il
+                y puise son inspiration...
               </p>
               <p>
                 Pour que ses « Lettres de mon cabanon », mêlant vérité, humour
                 et légende, ne se perdent dans la nuit des temps, Richard les
                 couche sur le papier sans prétention littéraire mais devoir de
                 mémoire ! Ses récits invitent à plonger dans les parfums iodés
-                de la Méditerranée, la douceur des veillées et l’éternelle quête
-                du merveilleux.
+                de la Méditerranée, la douceur des veillées...
+              </p>
+              <p>
+                Une éternelle et affectueuse Amitié lit l'auteur avec Claude le
+                personnage central du livre, son ami de toujours.
+                <br />
+                Claude dit souvent: " Avec Richard nous nous sommes connus avant
+                de naître ! "
               </p>
             </div>
 
-            <img
-              src={photoRichardEcrivain}
-              alt="Richard Arnaud et Yvan Audouard"
-            />
+         
           </section>
         )}
 

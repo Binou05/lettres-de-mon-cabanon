@@ -7,7 +7,7 @@ import "./Book.css";
 import coverVerso from "../assets/images/photo-verso-livre.jpg";
 import coverRecto from "../assets/images/photo-recto-livre.jpg";
 import imagePapa from "../assets/images/Image-papa.jpg";
-
+import photoRichardEcrivain from "../assets/images/photo-richard-ecrivain.jpg";
 
 export default function Book() {
   const [open, setOpen] = useState(false);
@@ -88,6 +88,10 @@ export default function Book() {
                 temps, je les ai couchées sur le papier sans prétention
                 littéraire par devoir de mémoire.
               </p>
+               <img className="image-Yvan"
+                            src={photoRichardEcrivain}
+                            alt="Richard Arnaud et Yvan Audouard"
+                          />
               <p>
                 Je remercie chaleureusement le regretté Yvan AUDOUARD qui, au
                 cours de « journées de cœur et d’amitié », me suggéra d’écrire

@@ -111,6 +111,16 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     flex-shrink: 0;
   }
+.image-Yvan {
+  width: 200px;
+  height: 120px;
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+
+  display: block;
+  margin: 20px auto;   /* ← ça centre horizontalement */
+}
   
   .intro-text {
     font-family: 'Merriweather', serif;
