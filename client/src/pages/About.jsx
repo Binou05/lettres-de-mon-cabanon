@@ -186,7 +186,7 @@ export default function About() {
               <p>
                 Pour que ses « Lettres de mon cabanon », mêlant vérité, humour
                 et légende, ne se perdent dans la nuit des temps, Richard les
-                couche sur le papier sans prétention littéraire mais devoir de
+                couche sur le papier sans prétention littéraire mais par devoir de
                 mémoire ! Ses récits invitent à plonger dans les parfums iodés
                 de la Méditerranée, la douceur des veillées...
               </p>
