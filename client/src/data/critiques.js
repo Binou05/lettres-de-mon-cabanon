@@ -54,7 +54,7 @@ export const CRITIQUES = [
     extrait:
       "Merveilleuses histoires réelles, une amitié sincère, cette belle Provence racontait avec amour, avec gentillesse et douceur, avec du rire dans ses expressions très provençale. Un parfum d’eau de mer de Méditerranée, de poisson, de sel marin. L’auteur m’a offert tout ce que j’aime dans cette Provence. Un grand merci à l’auteur qui ma fait revivre 50ans de bonheur( avec Gaby).",
 
-    tags: ["Bonheur", "Emotion"],
+    tags: ["Bonheur", "Rire"],
   },
   {
     id: "crit-006",
@@ -64,7 +64,7 @@ export const CRITIQUES = [
     extrait:
       "L’auteur a le don de captiver la lectrice que je suis avec ses anecdotes savoureusement rythmées où l’humour surgit avec finesse et naturel. Chaque scène est un éclat de vie et les rires qui en découlent sont aussi spontanés que précieux. La Provence que vous nous offrez n’est pas seulement un décor, sous votre plume elle prend vie, on s’y promène avec délice bercé par vos mots justes et sensoriels. Et que dire de cet ode à l’amitié indéfectible, ces liens sincères et durables nous rappelant l’importance de la fraternité et des bonheurs simples. L’espace d’un instant vous nous faites oublier les aléas du quotidien. Merci pour ce moment de soleil, votre écriture à la fois drôle tendre et lumineuse est une invitation au voyage et au bien-être.",
 
-    tags: ["Bonheur", "Emotion"],
+    tags: ["Humour", "Poétique"],
   },
   {
     id: "crit-007",
@@ -75,6 +75,16 @@ export const CRITIQUES = [
       "De bien jolies histoires assez rocambolesques dignes de Laurel et Hardy qui se passent dans les Bouches du Rhône, entre Port Saint Louis du Rhône et la Côte Bleue. On suit Richard et Claude dans leurs aventures de pêche et parfois de cueillettes de champignons. Quel plaisir de retrouver les expressions marseillaises et les lieux que je connais si bien. C'est un livre chantant et drôle.",
 
     tags: ["Bonheur", "Emotion"],
+  },
+  {
+    id: "crit-008",
+    source: "Avis lecteur",
+    auteur: "Jean Pierre Chetaille",
+    date: "2026-01-10",
+    extrait:
+      "J'ai lu avec plaisir tes histoires issues de ton cabanon et je me suis régalé. J'ai l'avantage de bien te connaître et d'avoir en mémoire, à l'oreille, le son de ta voix. Ainsi j'ai eu l'impression que c'était toi-même qui me contait intimement tes nouvelles éditées ! Serais-tu l'homme qui murmurait à l'oreille des lecteurs ? La vraie traduction de l'américain du film célèbre aurait dû être 'L'homme qui chuchotait à l'oreille des chevaux'. Oui c'est ça, tu es le conteur qui, avec l'accent provençal, chuchote à l'oreille de ton lecteur... Bravo. ",
+
+    tags: ["Provence", "Nouvelles"],
   },
 ];
 
