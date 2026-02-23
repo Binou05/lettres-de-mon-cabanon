@@ -94,7 +94,7 @@
 @media (min-width: 1025px){
   .is-bio{
     background-size: contain;
-    background-position: 30 0;
+    background-position: 30% 0;
   }
 }
 
@@ -603,9 +603,9 @@
 @media (min-width: 1200px) and (max-width: 1366px) and (max-height: 820px) {
   .is-bio { 
     /* décale un peu le décor pour libérer le texte */
-    background-position: 30% 30px;    /* joue -60px / -20px si besoin */
+    background-position: 30% 90%;    /* joue -60px / -20px si besoin */
     background-size: contain;
-        background-image: none !important;
+       
     background-color: #f6efe1;
   }
   .is-bio .about__card{
@@ -784,7 +784,7 @@
   .is-bio{
     background-image:url("../assets/images/background-bio.png") !important;
     background-size:112% auto !important;       /* léger zoom pour éloigner stylo/ancre */
-    background-position:58% -8px !important;
+    background-position:58% -10px !important;
   }
   .is-bio .about__card{ top:-20vh; }
 }
@@ -848,6 +848,34 @@
   }
 }
 
+/* =========================
+   BIO — cadrage du background (FINAL)
+   ========================= */
 
+.about.is-bio{
+  background-color: #E8D8BD;
+  background-image: url("../assets/images/background-bio.png");
+  background-repeat: no-repeat;
+
+  /* base (mobile/tablette) */
+  background-size: cover;
+  background-position: center 60px; /* sous la navbar */
+}
+
+/* Desktop : on descend l’image pour que le stylo ne touche plus le texte */
+@media (min-width: 1025px){
+  .about.is-bio{
+    background-size: 112% auto;   /* léger zoom */
+    background-position: 58% 84%; /* <- descend le décor */
+  }
+}
+
+/* Très grands écrans : encore un peu plus bas */
+@media (min-width: 1600px){
+  .about.is-bio{
+    background-size: 108% auto;
+    background-position: 50% 84%;
+  }
+}
 
 
