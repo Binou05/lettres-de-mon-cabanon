@@ -111,6 +111,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     flex-shrink: 0;
   }
+   
 .image-Yvan {
   width: 200px;
   height: 120px;
@@ -125,6 +126,15 @@
   .intro-text {
     font-family: 'Merriweather', serif;
     font-size: 2rem;           /* plus grand */
+    font-weight: 700;          /* semi-bold */
+    line-height: 1.2;          /* serré pour un titre */
+    color: #2f6b94;            /* même bleu que le titre principal */
+    margin: 0;
+    white-space: nowrap;       /* une ligne sans retour auto */
+  }
+  .intro-text1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;           /* plus grand */
     font-weight: 700;          /* semi-bold */
     line-height: 1.2;          /* serré pour un titre */
     color: #2f6b94;            /* même bleu que le titre principal */

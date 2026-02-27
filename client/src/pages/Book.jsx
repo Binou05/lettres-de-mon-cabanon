@@ -7,6 +7,7 @@ import "./Book.css";
 import coverVerso from "../assets/images/photo-verso-livre.jpg";
 import coverRecto from "../assets/images/photo-recto-livre.jpg";
 import imagePapa from "../assets/images/Image-papa.jpg";
+import photoSabine from "../assets/images/photoSabine.jpg";
 import photoRichardEcrivain from "../assets/images/photo-richard-ecrivain.jpg";
 
 export default function Book() {
@@ -47,9 +48,21 @@ export default function Book() {
           </div>
 
           <section className="book-about">
-            
             <div className="separator" />
 
+            <div className="about-intro">
+              <img
+                className="image-papa"
+                src={photoSabine}
+                alt="Portrait de l'illustratrice du livre, Sabine Arnaud/Bertoneri"
+              />
+              <p className="intro-text1">
+                L'illustratrice IA du livre <br/> Sabine Arnaud/Bertoneri
+                <br />« La magie de l'IA au service de la créativité
+                »
+              </p>
+            </div>
+            <div className="separator" />
             <div className="about-intro">
               <img
                 className="image-papa"
@@ -61,8 +74,10 @@ export default function Book() {
                 <br />« Histoires d’eaux »
               </p>
             </div>
+
             <p className="intro">
-              Des récits aux parfums de vérité des contes du Midi </p>
+              Des récits aux parfums de vérité des contes du Midi{" "}
+            </p>
             <br />
             <div className="about-text">
               <p>
@@ -83,15 +98,16 @@ export default function Book() {
               </p>
               <p>
                 C’est depuis mon petit Cabanon familial ancré sur le They de
-                Brûle-Tabac à Port-Saint-Louis-du-Rhône, pour éviter que
-                toutes ces histoires authentiques ne se perdent dans la nuit des
-                temps, je les ai couchées sur le papier sans prétention
-                littéraire par devoir de mémoire.
+                Brûle-Tabac à Port-Saint-Louis-du-Rhône, pour éviter que toutes
+                ces histoires authentiques ne se perdent dans la nuit des temps,
+                je les ai couchées sur le papier sans prétention littéraire par
+                devoir de mémoire.
               </p>
-               <img className="image-Yvan"
-                            src={photoRichardEcrivain}
-                            alt="Richard Arnaud et Yvan Audouard"
-                          />
+              <img
+                className="image-Yvan"
+                src={photoRichardEcrivain}
+                alt="Richard Arnaud et Yvan Audouard"
+              />
               <p>
                 Je remercie chaleureusement le regretté Yvan AUDOUARD qui, au
                 cours de « journées de cœur et d’amitié », me suggéra d’écrire
