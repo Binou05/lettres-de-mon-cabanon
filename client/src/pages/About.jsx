@@ -176,7 +176,7 @@ export default function About() {
                 Chaque été pendant toute son adolescence, lors des vacances
                 scolaires, sur les pas-de-portes à Marseille, sur la plage
                 devant les cabanons à Port Saint Louis du Rhône, lieux se
-                transformant en véritable agoras, il va s'imprégner de l'art
+                transformant en véritables agoras, il va s'imprégner de l'art
                 oral de l'histoire drôle, du fait divers rocambolesque, du conte
                 incroyable, tous certifiés vrais par les rapporteurs d'un soir
                 même quand ils défient l'entendement !
@@ -206,8 +206,8 @@ export default function About() {
 
         {tab === "articles" && (
           <section className="about__articles">
-            <h2>Dans la presse</h2>
-
+            <h2>Articles de presse et Dédicaces de l'épilogue de Yvan Audouard</h2>
+            
             <div className="articles-grid">
               {articles.map(({ src, caption }, i) => (
                 <figure key={i} className="article-thumb">

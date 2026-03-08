@@ -250,8 +250,14 @@
 .about__bio-text p{ margin-bottom:1.2rem; margin-right:1.2rem; }
 
 /* ARTICLES — inchangé */
-.about__articles{ background-color:#eedeb282; }
-.about__articles h2{ text-align:center; margin-bottom:3rem; margin-top:5rem; color:#2f6b94; }
+.about__articles{ background-color:#eedeb282; padding-top: 4rem; }
+.about__articles h2{
+  text-align:center;
+  margin-bottom:3rem;
+  
+  color:#2f6b94;
+}
+
 .articles-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; justify-content:center; justify-items:center; }
 .articles-grid figure{ width:260px; background:#ffffff05; border-radius:8px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
 .articles-grid img{ width:100%; }
