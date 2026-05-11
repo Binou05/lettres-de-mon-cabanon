@@ -92,7 +92,7 @@ import Dédicace_dassault3 from "../assets/images/Dédicace_dassault3.jpg";
 import dédicaceBallaruc from "../assets/images/dédicaceBallaruc.jpg";
 import photobalaruc from "../assets/images/photobalaruc.jpg";
 import photobalaruc2 from "../assets/images/photobalaruc2.jpg";
-import photobalaruc3 from "../assets/images/photobalaruc3.jpg";
+
 
 import Expomiramasdéc25 from "../assets/images/Expomiramasdéc25.jpg";
 import Expomiramas2 from "../assets/images/Expomiramas2.jpg";
@@ -679,12 +679,7 @@ export default function About() {
                   alt="Balaruc"
                   onClick={() => setZoomImage(photobalaruc2)}
                 />
-                <img
-                  className="block-sub"
-                  src={photobalaruc3}
-                  alt="Balaruc"
-                  onClick={() => setZoomImage(photobalaruc3)}
-                />
+             
               </div>
             </div>
             {/* Bloc Le Castelet */}
