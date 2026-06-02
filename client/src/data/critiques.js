@@ -17,15 +17,8 @@ export const CRITIQUES = [
       "J’ai pris le temps de m’installer avec ton livre comme on s’installe face à la mer, en silence, dans l’écoute. Ton livre m’a fait rire – souvent à voix haute – m’a ému profondément, et parfois même touché là où les mots n’arrivent que rarement. Tu as su mêler l’humour à la tendresse, la simplicité au profond, la mémoire au vivant. Lettres de mon cabanon n’est pas une simple lecture. C’est une rencontre. Celle d’un homme avec sa mémoire, ses paysages, ses silences et ses eaux intérieures. Et à travers toi, j’ai vu ressurgir des vérités simples, universelles, celles qu’on oublie souvent, trop pris par le tumulte du monde. Chaque page m’a fait l’effet d’une confidence. Tu écris comme on parle à un ami au coin du feu : avec justesse, chaleur et pudeur. Et cela m’a profondément touché. Ce livre, c’est un peu de ton âme que tu as laissé couler entre les lignes. Et je l’ai reçue, Fraternellement. Merci pour cette offrande. Merci pour ta voix. Merci pour cette Provence intérieure que tu nous transmets comme on transmet une lumière rare. ",
     tags: ["Style", "Ambiance"],
   },
-  {
-    id: "crit-003",
-    source: "Avis lecteur",
-    auteur: "Marlène Galtier",
-    date: "2025-11-05",
-    extrait:
-      "Ce livre il fallait l'écrire. Vraiment. Quelle richesse à l'intérieur !  Et quelle jolie façon tu as de raconter les choses !  Je me suis plongée avec délice dans ces récits pleins de fraîcheur, de tendresse et d'humour.  J'ai ri à certains passages en sentant venir la ''catastrophe''. Encore plus quand elle arrivait. Qu'elle scoumougne ! 😀, Un beau témoignage en tout cas d'amitié et de complicité. Ton écriture révèle une grande sensibilité et beaucoup de finesse. On ne peut qu'être séduit. (À quand les prochaines lettres de ton cabanon écrites avec ton beau stylo à l'encre de sel couleur bleu de mer ? 😉) ",
-    tags: ["Emotion", "Humour"],
-  },
+ 
+    
   {
     id: "crit-004",
     source: "Avis lecteur",
@@ -39,7 +32,7 @@ export const CRITIQUES = [
   {
     id: "crit-005",
     source: "Avis lecteur",
-    auteur: "Martine &Francisco Prunera-Usach ( Prunette )",
+    auteur: "Martine & Francisco Prunera-Usach ( Prunette )",
     date: "2025-12-02",
     extrait:
       "Absolument génial ce livre !A « consommer » sans modération ! Ces histoires vraies et la façon « provençale »de les écrire par mon ami Richard , m’ont fait pleurer de rire 🤣(Une véritable thérapie pour le moral en baisse de certains ! ) ! Merci 🙏🏻 pour ce bouquin que j’ai absolument adoré ! un grand BRAVO à Richard Arnaud 👏J’attends, avec une grande impatience un autre bouquin, écrit par le talentueux Richard , que ce soit avec des récits vrais ou inventés , ce sera toujours un vrai régal pour le lecteur 👍",
