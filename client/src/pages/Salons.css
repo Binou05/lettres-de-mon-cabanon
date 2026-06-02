@@ -1,0 +1,173 @@
+.salons-page {
+  min-height: 100vh;
+  background: #f7efd8;
+  padding: 90px 20px 80px;
+  color: #005875;
+}
+
+.salons-wrapper {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 65px 42px 60px;
+  background: #f4ead0;
+  box-shadow: 0 18px 45px rgba(0, 88, 117, 0.1);
+}
+
+.salons-hero {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.salons-hero__eyebrow {
+  margin: 0 0 10px;
+  color: #005875;
+  font-size: 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.salons-hero h1 {
+  margin: 0 0 12px;
+  color: #005875;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.salons-hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #005875;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.salons-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #005875;
+}
+
+.salons-message--error {
+  color: #9b2d2d;
+}
+
+.salons-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.salon-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
+  padding: 26px;
+  background: #fffaf2;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0, 88, 117, 0.12);
+}
+
+.salon-card--no-image {
+  display: block;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.salon-card__image {
+  min-height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e7d6be;
+}
+
+.salon-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.salon-card__content {
+  padding: 8px 4px;
+}
+
+.salon-card__tag {
+  display: inline-flex;
+  margin-bottom: 18px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #f1d49b;
+  color: #004d68;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.salon-card h2 {
+  margin: 0 0 24px;
+  color: #005875;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.1;
+}
+
+.salon-card__meta {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.salon-card__meta p {
+  margin: 0;
+  color: #004d68;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.salon-card__description {
+  max-width: 600px;
+  margin: 0 auto 28px;
+  color: #004d68;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.salon-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: #005875;
+  color: #fffaf2;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.salon-card__button:hover {
+  background: #00445c;
+  color: #fffaf2;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 800px) {
+  .salons-page {
+    padding: 70px 12px 60px;
+  }
+
+  .salons-wrapper {
+    padding: 45px 18px 45px;
+  }
+
+  .salon-card {
+    grid-template-columns: 1fr;
+  }
+
+  .salon-card--no-image {
+    max-width: 100%;
+  }
+
+  .salon-card__image {
+    min-height: 240px;
+  }
+}

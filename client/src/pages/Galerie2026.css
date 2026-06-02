@@ -1,0 +1,232 @@
+.galerie-page {
+  min-height: 100vh;
+  background: #f7efd8;
+  padding: 90px 20px 80px;
+  color: #005875;
+}
+
+.galerie-wrapper {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 34px 42px 60px;
+  background: #f4ead0;
+  box-shadow: 0 18px 45px rgba(0, 88, 117, 0.1);
+}
+
+.galerie-title {
+  margin: 0 0 42px;
+  text-align: center;
+  color: #005875;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+}
+
+.galerie-intro {
+  max-width: 780px;
+  margin: 0 auto 55px;
+  text-align: center;
+  color: #005875;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.galerie-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #005875;
+}
+
+.galerie-message--error {
+  color: #9b2d2d;
+}
+
+.galerie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.galerie-card {
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fffaf2;
+  box-shadow: 0 10px 22px rgba(0, 88, 117, 0.12);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.galerie-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0, 88, 117, 0.18);
+}
+
+.galerie-card--featured {
+  grid-column: 1 / -1;
+}
+
+.galerie-card__image {
+  width: 100%;
+  height: 250px;
+  background: #e7d6be;
+}
+
+.galerie-card--featured .galerie-card__image {
+  height: 520px;
+}
+
+.galerie-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Pour la grande affiche en haut : on évite de couper le texte */
+.galerie-card--featured .galerie-card__image img {
+  object-fit: contain;
+  background: #f4ead0;
+}
+
+.galerie-card__placeholder {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: #005875;
+  font-style: italic;
+}
+
+.galerie-card__content {
+  padding: 16px;
+}
+
+.galerie-card__content span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f1d49b;
+  color: #004d68;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.galerie-card__content h2 {
+  margin: 0 0 8px;
+  color: #005875;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+}
+
+.galerie-card__content p {
+  margin: 0;
+  color: #004d68;
+  line-height: 1.55;
+}
+
+.galerie-card__meta {
+  margin-bottom: 8px !important;
+  color: #a67448 !important;
+  font-weight: 700;
+}
+
+.galerie-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 55, 75, 0.82);
+}
+
+.galerie-modal__close {
+  position: fixed;
+  top: 24px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #fffaf2;
+  color: #005875;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.galerie-modal__content {
+  width: min(100%, 980px);
+  max-height: 90vh;
+  overflow: auto;
+  border-radius: 12px;
+  background: #fffaf2;
+}
+
+.galerie-modal__content img {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  background: #111;
+  display: block;
+}
+
+.galerie-modal__text {
+  padding: 24px;
+}
+
+.galerie-modal__text h2 {
+  margin: 0 0 10px;
+  color: #005875;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.galerie-modal__text p {
+  color: #004d68;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .galerie-wrapper {
+    padding: 30px 24px 50px;
+  }
+
+  .galerie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galerie-card--featured {
+    grid-column: 1 / -1;
+  }
+
+  .galerie-card--featured .galerie-card__image {
+    height: 390px;
+  }
+}
+
+@media (max-width: 600px) {
+  .galerie-page {
+    padding: 70px 12px 60px;
+  }
+
+  .galerie-wrapper {
+    padding: 26px 14px 40px;
+  }
+
+  .galerie-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .galerie-card__image {
+    height: 260px;
+  }
+
+  .galerie-card--featured .galerie-card__image {
+    height: 300px;
+  }
+
+  .galerie-intro {
+    margin-bottom: 38px;
+  }
+}

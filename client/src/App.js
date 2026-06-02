@@ -12,6 +12,8 @@ import Book from "./pages/Book";
 import Critiques from "./pages/Critiques";
 import Contact from "./pages/Contact";
 
+import Salons from "./pages/Salons";
+import Galerie2026 from "./pages/Galerie2026";
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/book" element={<Book />} />
         <Route path="/critiques" element={<Critiques />} />
+        <Route path="/salons" element={<Salons />} />
+        <Route path="/galerie-2026" element={<Galerie2026 />} />
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/cgu" element={<Cgu />} />

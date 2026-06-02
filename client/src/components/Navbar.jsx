@@ -55,6 +55,12 @@ useEffect(() => {
               Critiques
             </Link>
           </li>
+          <Link to="/salons" onClick={closeMenu}>
+            Salons & dédicaces
+          </Link>
+          <Link to="/galerie-2026" onClick={closeMenu}>
+            Galerie 2026
+          </Link>
           <li>
             <Link to="/contact" onClick={closeMenu}>
               Contact

@@ -135,4 +135,14 @@
       max-height: 240px; /* ajuste pour 4 ou 5 items */
     }
   }
-  
+  .navbar a,
+.navbar a:visited,
+.navbar a:active,
+.navbar a:focus {
+  color: #fffaf2 !important;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #f4d6a3 !important;
+}
