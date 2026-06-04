@@ -27,8 +27,6 @@ export default function Galerie2026() {
   return (
     <main className="galerie-page">
       <section className="galerie-wrapper">
-       
-
         <h1 className="galerie-title">Affiches & Photos</h1>
 
         <p className="galerie-intro">
@@ -53,7 +51,11 @@ export default function Galerie2026() {
         <div className="galerie-grid">
           {items.map((item, index) => (
             <article
-              className={`galerie-card ${index === 0 ? "galerie-card--featured" : ""}`}
+              className={`galerie-card ${
+                item.categorie?.toLowerCase() === "affiche"
+                  ? "galerie-card--featured"
+                  : ""
+              }`}
               key={`${item.titre}-${index}`}
               onClick={() => setSelectedImage(item)}
             >

@@ -51,8 +51,8 @@
 .galerie-card {
   overflow: hidden;
   border-radius: 8px;
-  background: #fffaf2;
-  box-shadow: 0 10px 22px rgba(0, 88, 117, 0.12);
+  background: transparent;
+  box-shadow: none;
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -68,8 +68,11 @@
 
 .galerie-card__image {
   width: 100%;
-  height: 250px;
-  background: #e7d6be;
+  height: 340px;
+  background: #f4ead0;
+  border-radius: 10px;
+  overflow: hidden;
+  
 }
 
 .galerie-card--featured .galerie-card__image {
@@ -79,10 +82,14 @@
 .galerie-card__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   display: block;
+  background: #f4ead0;
 }
-
+.galerie-card__content:empty {
+  display: none;
+}
 /* Pour la grande affiche en haut : on évite de couper le texte */
 .galerie-card--featured .galerie-card__image img {
   object-fit: contain;
@@ -199,9 +206,14 @@
     grid-column: 1 / -1;
   }
 
-  .galerie-card--featured .galerie-card__image {
-    height: 390px;
-  }
+ .galerie-card--featured .galerie-card__image {
+  height: auto;
+}
+
+.galerie-card--featured .galerie-card__image img {
+  width: 100%;
+  height: auto;
+}
 }
 
 @media (max-width: 600px) {
