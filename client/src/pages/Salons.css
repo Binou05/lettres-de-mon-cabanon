@@ -59,8 +59,9 @@
 
 .salon-card {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 28px;
+  grid-template-columns: 430px 1fr;
+  gap: 32px;
+  align-items: start;
   padding: 26px;
   background: #fffaf2;
   border-radius: 14px;
@@ -75,16 +76,21 @@
 }
 
 .salon-card__image {
-  min-height: 260px;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   overflow: hidden;
-  background: #e7d6be;
+  background: #fffaf2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .salon-card__image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .salon-card__content {
@@ -169,5 +175,9 @@
 
   .salon-card__image {
     min-height: 240px;
+  }
+   .salon-card__image img {
+    width: 100%;
+    height: auto;
   }
 }
